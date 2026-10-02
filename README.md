@@ -1,4 +1,4 @@
-# Kernel
+
 # Kernel
 
 ## Proceso de arranque
