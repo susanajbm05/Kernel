@@ -44,4 +44,4 @@ SECTIONS
         *(.bss)
     }
 }
->>>>>>> f8cd8fc (Agrega nuevo archivo del kernel)
+
