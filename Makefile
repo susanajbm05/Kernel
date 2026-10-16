@@ -15,7 +15,7 @@ LDFLAGS := -m elf_i386 -T linker.ld -nostdlib
 # Archivos
 BUILD   := build
 ISODIR  := $(BUILD)/isodir
-OBJS    := $(BUILD)/boot.o $(BUILD)/kernel.o $(BUILD)/terminal.o
+OBJS    := $(BUILD)/boot.o $(BUILD)/kernel.o $(BUILD)/terminal.o $(BUILD)/memory.o $(BUILD)/process.o $(BUILD)/task_demo.o
 KERNEL  := $(BUILD)/kernel.bin
 ISO     := $(BUILD)/kernel.iso
 
@@ -32,6 +32,13 @@ $(BUILD)/kernel.o: kernel/kernel.c | $(BUILD)
 	$(CC) $(CFLAGS) $< -o $@
 $(BUILD)/terminal.o: kernel/terminal.c kernel/terminal.h | $(BUILD)
 	$(CC) $(CFLAGS) kernel/terminal.c -o $@
+$(BUILD)/memory.o: kernel/memory.c kernel/memory.h | $(BUILD)
+	$(CC) $(CFLAGS) kernel/memory.c -o $@
+$(BUILD)/process.o: kernel/process.c kernel/process.h | $(BUILD)
+	$(CC) $(CFLAGS) kernel/process.c -o $@
+
+$(BUILD)/task_demo.o: kernel/task_demo.c kernel/process.h | $(BUILD)
+	$(CC) $(CFLAGS) kernel/task_demo.c -o $@
 
 # 3-4. Enlazar -> kernel.bin
 $(KERNEL): $(OBJS) linker.ld
