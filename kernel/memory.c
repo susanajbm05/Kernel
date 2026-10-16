@@ -1,3 +1,4 @@
+
 #include "memory.h"
 
 extern unsigned int kernel_end;
@@ -9,7 +10,7 @@ static unsigned int heap_limit = HEAP_LIMIT;
 
 void memory_init(void)
 {
-    heap_current = ((unsigned int)&kernel_end + 3) & ~3;
+    heap_current = ((unsigned int)&kernel_end + 3) & ~3U;
 }
 
 void *kmalloc(size_t size)
@@ -22,15 +23,20 @@ void *kmalloc(size_t size)
 
     address = heap_current;
 
-    if (size > heap_limit || address > heap_limit - size)
+    if (address >= heap_limit || size > heap_limit - address)
         return (void *)0;
 
-    aligned_size = (size + 3) & ~3;
+    if (size > 0xFFFFFFFCU)
+        return (void *)0;
 
-    if (aligned_size < size || aligned_size > heap_limit - address)
+    aligned_size = (size + 3U) & ~3U;
+
+    if (aligned_size > heap_limit - address)
         return (void *)0;
 
     heap_current += aligned_size;
 
     return (void *)address;
 }
+
+
