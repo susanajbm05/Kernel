@@ -15,7 +15,7 @@ LDFLAGS := -m elf_i386 -T linker.ld -nostdlib
 # Archivos
 BUILD   := build
 ISODIR  := $(BUILD)/isodir
-OBJS    := $(BUILD)/boot.o $(BUILD)/kernel.o $(BUILD)/terminal.o $(BUILD)/memory.o $(BUILD)/process.o $(BUILD)/task_demo.o
+OBJS := $(BUILD)/boot.o $(BUILD)/kernel.o $(BUILD)/terminal.o $(BUILD)/keyboard.o $(BUILD)/memory.o $(BUILD)/process.o $(BUILD)/task_demo.o
 KERNEL  := $(BUILD)/kernel.bin
 ISO     := $(BUILD)/kernel.iso
 
@@ -32,6 +32,8 @@ $(BUILD)/kernel.o: kernel/kernel.c | $(BUILD)
 	$(CC) $(CFLAGS) $< -o $@
 $(BUILD)/terminal.o: kernel/terminal.c kernel/terminal.h | $(BUILD)
 	$(CC) $(CFLAGS) kernel/terminal.c -o $@
+$(BUILD)/keyboard.o: kernel/keyboard.c kernel/keyboard.h | $(BUILD)
+	$(CC) $(CFLAGS) kernel/keyboard.c -o $@
 $(BUILD)/memory.o: kernel/memory.c kernel/memory.h | $(BUILD)
 	$(CC) $(CFLAGS) kernel/memory.c -o $@
 $(BUILD)/process.o: kernel/process.c kernel/process.h | $(BUILD)
@@ -58,7 +60,7 @@ $(ISO): $(KERNEL) iso/boot/grub/grub.cfg
 
 # 7. QEMU
 run: $(ISO)
-	$(QEMU) -cdrom $< -boot d
+	$(QEMU) -no-reboot -no-shutdown -cdrom $< -boot d
 
 # 8. Prueba de arranque
 test: $(ISO)

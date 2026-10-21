@@ -6,9 +6,12 @@ void task_demo(void);
 
 void kernel_main(void)
 {
+    char entrada[64];
+
     terminal_clear();
     memory_init();
-    terminal_print("HOLI USUARIO\n");
+
+    terminal_print("ONYX OS - Prueba de teclado\n");
     terminal_print("Kernel iniciado correctamente.\n");
 
     process_init();
@@ -25,9 +28,15 @@ void kernel_main(void)
         terminal_print("Error al crear la tarea.\n");
     }
 
+    terminal_print("\nEscribi algo y presiona ENTER: ");
+    terminal_readline(entrada, sizeof(entrada));
+
+    terminal_print("Recibido: ");
+    terminal_print(entrada);
+    terminal_print("\nPrueba finalizada.\n");
+
     while (1)
     {
         __asm__ volatile ("hlt");
     }
 }
-

@@ -1,4 +1,6 @@
+
 #include "terminal.h"
+#include "keyboard.h"
 
 #define VGA_ADDRESS 0xB8000
 #define VGA_WIDTH 80
@@ -16,7 +18,6 @@ void terminal_clear(void)
         for (int x = 0; x < VGA_WIDTH; x++)
         {
             int posicion = (y * VGA_WIDTH + x) * 2;
-
             video[posicion] = ' ';
             video[posicion + 1] = color;
         }
@@ -45,6 +46,20 @@ void terminal_putchar(char c)
         return;
     }
 
+    if (c == '\b')
+    {
+        if (columna > 0)
+        {
+            columna--;
+
+            int posicion = (fila * VGA_WIDTH + columna) * 2;
+            video[posicion] = ' ';
+            video[posicion + 1] = color;
+        }
+
+        return;
+    }
+
     int posicion = (fila * VGA_WIDTH + columna) * 2;
 
     video[posicion] = c;
@@ -65,3 +80,49 @@ void terminal_print(const char* texto)
         terminal_putchar(texto[i]);
     }
 }
+
+void terminal_readline(char *buffer, unsigned int max_length)
+{
+    if (buffer == 0 || max_length == 0)
+    {
+        return;
+    }
+
+    unsigned int length = 0;
+
+    while (1)
+    {
+        char c = keyboard_getchar();
+
+        if (c == '\0')
+        {
+            continue;
+        }
+
+        if (c == '\n')
+        {
+            buffer[length] = '\0';
+            terminal_putchar('\n');
+            return;
+        }
+
+        if (c == '\b')
+        {
+            if (length > 0)
+            {
+                length--;
+                terminal_putchar('\b');
+            }
+
+            continue;
+        }
+
+        if (length + 1 < max_length)
+        {
+            buffer[length] = c;
+            length++;
+            terminal_putchar(c);
+        }
+    }
+}
+
