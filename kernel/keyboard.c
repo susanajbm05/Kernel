@@ -71,10 +71,7 @@ char keyboard_getchar(void)
 
     while ((inb(0x64) & 1) == 0)
     {
-        for (volatile unsigned int i = 0; i < 10000; i++)
-        {
-            __asm__ volatile ("pause");
-        }
+        __asm__ volatile ("pause");
     }
 
     code = inb(0x60);
