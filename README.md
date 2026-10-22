@@ -27,3 +27,4 @@ https://git.alesoftsolutions.website/ProyectoOnyx/Kernel/src/branch/boot-kiara/d
 
 ### Evidencia 2
 Onix OS ejecutándose correctamente en QEMU.
+https://git.alesoftsolutions.website/ProyectoOnyx/Kernel/src/branch/boot-kiara/docs/evidencias/Captura%20desde%202026-10-21%2019-58-21.png
