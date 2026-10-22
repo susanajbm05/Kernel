@@ -23,6 +23,7 @@ En la segunda captura se muestra Onix OS ejecutándose en QEMU. El kernel inicia
 
 ### Evidencia 1
 Menú de GRUB cargando Onyx OS.
+https://git.alesoftsolutions.website/ProyectoOnyx/Kernel/src/branch/boot-kiara/docs/evidencias/Captura%20desde%202026-10-21%2019-41-26.png
 
 ### Evidencia 2
 Onix OS ejecutándose correctamente en QEMU.
