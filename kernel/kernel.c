@@ -168,6 +168,7 @@ void kernel_main(void)
     terminal_clear();
     memory_init();
     process_init();
+    fs_init(); 
 
     terminal_print("ONYX OS - Terminal interactiva\n");
     terminal_print("Escribi help para ver los comandos.\n\n");
