@@ -1,39 +1,30 @@
-
 # Kernel
+##Instrucciones de compilación
 
-## Proceso de arranque
+Primero se entra a la carpeta del proyecto:
 
-El kernel utiliza GRUB y el estándar Multiboot 1.
+cd ~/kernel
 
-El flujo de arranque es:
+Luego se ejecuta:
 
-GRUB → kernel.elf → _start → kernel_main
+make clean && make run
 
-## boot.asm
+Este comando limpia compilaciones anteriores, compila el kernel, genera la imagen ISO y abre Onix OS en QEMU.
 
-- `bits 32`: indica que el código es de 32 bits.
-- `.multiboot`: contiene la cabecera que GRUB utiliza para reconocer el kernel.
-- `0x1BADB002`: magic number de Multiboot 1.
-- `.bss`: reserva la memoria para el stack.
-- `_start`: punto de entrada del kernel.
-- `cli`: deshabilita las interrupciones.
-- `mov esp, stack_top`: configura el stack.
-- `call kernel_main`: pasa la ejecución al código en C.
-- `hlt`: detiene el procesador en caso de que `kernel_main` retorne.
+Cuando aparezca GRUB, se selecciona Onyx OS y se presiona Enter.
 
-## Requisitos para GRUB
+Si todo funciona correctamente, el sistema mostrará la pantalla de Onix OS y permitirá realizar la prueba de teclado.
 
-Para que GRUB cargue el kernel se necesita:
+## Evidencia de funcionamiento
 
-- Una cabecera Multiboot válida.
-- Un kernel ELF de 32 bits.
-- Un punto de entrada `_start`.
-- Un linker script que coloque correctamente la sección `.multiboot`.
-- Un archivo `grub.cfg`.
+En la primera captura se observa el menú de GRUB mostrando la opción **Onyx OS**, lo que confirma que la imagen ISO fue generada correctamente y que GRUB reconoce el kernel.
 
-## Compilación
+En la segunda captura se muestra Onix OS ejecutándose en QEMU. El kernel inicia correctamente y permite realizar la prueba de teclado.
 
-```bash
-nasm -f elf32 boot/boot.asm -o boot.o
-gcc -m32 -ffreestanding -fno-pie -fno-stack-protector -c kernel/kernel.c -o kernel.o
-ld -m elf_i386 -T linker.ld -o kernel.elf boot.o kernel.o
+### Evidencia 1
+Menú de GRUB cargando Onyx OS.
+https://git.alesoftsolutions.website/ProyectoOnyx/Kernel/src/branch/boot-kiara/docs/evidencias/Captura%20desde%202026-10-21%2019-41-26.png
+
+### Evidencia 2
+Onix OS ejecutándose correctamente en QEMU.
+https://git.alesoftsolutions.website/ProyectoOnyx/Kernel/src/branch/boot-kiara/docs/evidencias/Captura%20desde%202026-10-21%2019-58-21.png
