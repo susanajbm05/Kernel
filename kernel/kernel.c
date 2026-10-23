@@ -3,6 +3,7 @@
 #include "terminal.h"
 #include "process.h"
 #include "filesystem.h"
+#include "serial.h"
 
 void task_demo(void);
 
@@ -164,6 +165,8 @@ static void execute_command(const char *command)
 void kernel_main(void)
 {
     char entrada[64];
+
+    serial_init();
 
     terminal_clear();
     memory_init();

@@ -15,7 +15,7 @@ LDFLAGS := -m elf_i386 -T linker.ld -nostdlib
 # Archivos
 BUILD   := build
 ISODIR  := $(BUILD)/isodir
-OBJS := $(BUILD)/boot.o $(BUILD)/kernel.o $(BUILD)/terminal.o $(BUILD)/keyboard.o $(BUILD)/memory.o $(BUILD)/process.o $(BUILD)/task_demo.o $(BUILD)/filesystem.o
+OBJS := $(BUILD)/boot.o $(BUILD)/kernel.o $(BUILD)/terminal.o $(BUILD)/keyboard.o $(BUILD)/memory.o $(BUILD)/process.o $(BUILD)/task_demo.o $(BUILD)/filesystem.o $(BUILD)/serial.o
 KERNEL  := $(BUILD)/kernel.bin
 ISO     := $(BUILD)/kernel.iso
 
@@ -32,6 +32,8 @@ $(BUILD)/kernel.o: kernel/kernel.c | $(BUILD)
 	$(CC) $(CFLAGS) $< -o $@
 $(BUILD)/terminal.o: kernel/terminal.c kernel/terminal.h | $(BUILD)
 	$(CC) $(CFLAGS) kernel/terminal.c -o $@
+$(BUILD)/serial.o: kernel/serial.c kernel/serial.h | $(BUILD)
+	$(CC) $(CFLAGS) kernel/serial.c -o $@
 $(BUILD)/keyboard.o: kernel/keyboard.c kernel/keyboard.h | $(BUILD)
 	$(CC) $(CFLAGS) kernel/keyboard.c -o $@
 $(BUILD)/memory.o: kernel/memory.c kernel/memory.h | $(BUILD)

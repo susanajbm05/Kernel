@@ -1,6 +1,7 @@
 
 #include "terminal.h"
 #include "keyboard.h"
+#include "serial.h"
 
 #define VGA_ADDRESS 0xB8000
 #define VGA_WIDTH 80
@@ -40,6 +41,8 @@ void terminal_newline(void)
 
 void terminal_putchar(char c)
 {
+
+    serial_putchar(c);
     if (c == '\n')
     {
         terminal_newline();
@@ -92,7 +95,7 @@ void terminal_readline(char *buffer, unsigned int max_length)
 
     while (1)
     {
-        char c = keyboard_getchar();
+        char c = serial_getchar();
 
         if (c == '\0')
         {
