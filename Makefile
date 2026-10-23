@@ -15,7 +15,7 @@ LDFLAGS := -m elf_i386 -T linker.ld -nostdlib
 # Archivos
 BUILD   := build
 ISODIR  := $(BUILD)/isodir
-OBJS := $(BUILD)/boot.o $(BUILD)/kernel.o $(BUILD)/terminal.o $(BUILD)/keyboard.o $(BUILD)/memory.o $(BUILD)/process.o $(BUILD)/task_demo.o
+OBJS := $(BUILD)/boot.o $(BUILD)/kernel.o $(BUILD)/terminal.o $(BUILD)/keyboard.o $(BUILD)/memory.o $(BUILD)/process.o $(BUILD)/task_demo.o $(BUILD)/filesystem.o
 KERNEL  := $(BUILD)/kernel.bin
 ISO     := $(BUILD)/kernel.iso
 
@@ -71,3 +71,7 @@ $(BUILD):
 
 clean:
 	rm -rf $(BUILD)
+
+
+$(BUILD)/filesystem.o: kernel/filesystem.c kernel/filesystem.h | $(BUILD)
+	$(CC) $(CFLAGS) kernel/filesystem.c -o $@

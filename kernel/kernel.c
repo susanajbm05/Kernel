@@ -2,6 +2,7 @@
 #include "memory.h"
 #include "terminal.h"
 #include "process.h"
+#include "filesystem.h"
 
 void task_demo(void);
 
@@ -30,6 +31,26 @@ static void command_help(void)
     terminal_print(" clear - Limpiar pantalla\n");
     terminal_print(" mem   - Estado del asignador de memoria\n");
     terminal_print(" tasks - Demostracion de procesos\n");
+    terminal_print(" ls    - Listar contenido del directorio\n");
+    terminal_print(" pwd   - Mostrar directorio actual\n");
+    terminal_print(" cd    - Cambiar de directorio (cd home, cd ..)\n");
+}
+
+static void command_ls(void)
+{
+    char contenido[512];
+
+    fs_ls(contenido, sizeof(contenido));
+    terminal_print(contenido);
+}
+
+static void command_pwd(void)
+{
+    char ruta[128];
+
+    fs_pwd(ruta, sizeof(ruta));
+    terminal_print(ruta);
+    terminal_print("\n");
 }
 
 static void command_about(void)
@@ -74,9 +95,35 @@ static void command_tasks(void)
     }
 }
 
+static void command_cd(const char *path)
+{
+    if (path[0] == '\0')
+    {
+        terminal_print("Uso: cd <directorio>\n");
+        return;
+    }
+
+    if (fs_cd(path) == 0)
+    {
+        terminal_print("Directorio cambiado correctamente.\n");
+    }
+    else
+    {
+        terminal_print("Directorio no encontrado.\n");
+    }
+}
+
 static void execute_command(const char *command)
 {
-    if (command_equals(command, "help"))
+    if (command[0] == 'c' && command[1] == 'd' && command[2] == ' ')
+    {
+        command_cd(command + 3);
+    }
+    else if (command_equals(command, "cd"))
+    {
+        terminal_print("Uso: cd <directorio>\\n");
+    }
+    else if (command_equals(command, "help"))
     {
         command_help();
     }
@@ -87,6 +134,14 @@ static void execute_command(const char *command)
     else if (command_equals(command, "clear"))
     {
         terminal_clear();
+    }
+    else if (command_equals(command, "ls"))
+    {
+        command_ls();
+    }
+    else if (command_equals(command, "pwd"))
+    {
+        command_pwd();
     }
     else if (command_equals(command, "mem"))
     {
