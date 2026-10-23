@@ -104,7 +104,7 @@ static void command_cd(const char *path)
         return;
     }
 
-    if (fs_cd(path) == 0)
+    if (fs_cd(path) != 0)
     {
         terminal_print("Directorio cambiado correctamente.\n");
     }
@@ -167,11 +167,10 @@ void kernel_main(void)
     char entrada[64];
 
     serial_init();
-
     terminal_clear();
     memory_init();
     process_init();
-    fs_init(); 
+    fs_init();
 
     terminal_print("ONYX OS - Terminal interactiva\n");
     terminal_print("Escribi help para ver los comandos.\n\n");
@@ -183,4 +182,3 @@ void kernel_main(void)
         execute_command(entrada);
     }
 }
-

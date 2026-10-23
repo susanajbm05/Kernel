@@ -51,12 +51,32 @@ void serial_putchar(char c)
 
 char serial_getchar(void)
 {
-    while ((inb(COM1 + 5) & 0x01) == 0) {}
+    static int previous_was_cr = 0;
+
+    while ((inb(COM1 + 5) & 0x01) == 0)
+    {
+        __asm__ volatile ("pause");
+    }
 
     char c = (char)inb(COM1);
 
     if (c == '\r')
+    {
+        previous_was_cr = 1;
         return '\n';
+    }
+
+    if (c == '\n')
+    {
+        if (previous_was_cr)
+        {
+            previous_was_cr = 0;
+            return '\0';
+        }
+        return '\n';
+    }
+
+    previous_was_cr = 0;
 
     if (c == 127)
         return '\b';

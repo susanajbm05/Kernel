@@ -128,4 +128,3 @@ void terminal_readline(char *buffer, unsigned int max_length)
         }
     }
 }
-
