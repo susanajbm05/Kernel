@@ -35,6 +35,8 @@ static void command_help(void)
     terminal_print(" ls    - Listar contenido del directorio\n");
     terminal_print(" pwd   - Mostrar directorio actual\n");
     terminal_print(" cd    - Cambiar de directorio (cd home, cd ..)\n");
+    terminal_print(" mkdir - Crear un directorio\n");
+    terminal_print(" cat   - Mostrar el contenido de un archivo\n");
 }
 
 static void command_ls(void)
@@ -114,6 +116,44 @@ static void command_cd(const char *path)
     }
 }
 
+static void command_mkdir(const char *name)
+{
+    if (name[0] == '\0')
+    {
+        terminal_print("Uso: mkdir <nombre>\n");
+        return;
+    }
+
+    if (fs_mkdir(name))
+    {
+        terminal_print("Directorio creado correctamente.\n");
+    }
+    else
+    {
+        terminal_print("No se pudo crear el directorio.\n");
+    }
+}
+static void command_cat(const char *name)
+{
+    char contenido[FS_FILE_CONTENT_MAX];
+
+    if (name[0] == '\0')
+    {
+        terminal_print("Uso: cat <archivo>\n");
+        return;
+    }
+
+    if (fs_cat(name, contenido, sizeof(contenido)))
+    {
+        terminal_print(contenido);
+        terminal_print("\n");
+    }
+    else
+    {
+        terminal_print("Archivo no encontrado o no es un archivo.\n");
+    }
+}
+
 static void execute_command(const char *command)
 {
     if (command[0] == 'c' && command[1] == 'd' && command[2] == ' ')
@@ -151,6 +191,22 @@ static void execute_command(const char *command)
     else if (command_equals(command, "tasks"))
     {
         command_tasks();
+    }
+        else if (command[0] == 'm' &&
+             command[1] == 'k' &&
+             command[2] == 'd' &&
+             command[3] == 'i' &&
+             command[4] == 'r' &&
+             command[5] == ' ')
+    {
+        command_mkdir(command + 6);
+    }
+    else if (command[0] == 'c' &&
+             command[1] == 'a' &&
+             command[2] == 't' &&
+             command[3] == ' ')
+    {
+        command_cat(command + 4);
     }
     else if (command_equals(command, ""))
     {
