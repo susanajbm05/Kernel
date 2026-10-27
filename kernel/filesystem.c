@@ -197,6 +197,10 @@ static int fs_append(
 {
     unsigned int i = 0;
 
+    if (buffer == 0 || position == 0 || text == 0 || size == 0) {
+        return 0;
+    }
+
     while (text[i] != '\0') {
         if (*position >= size - 1) {
             buffer[*position] = '\0';
@@ -206,6 +210,7 @@ static int fs_append(
         buffer[(*position)++] = text[i++];
     }
 
+    buffer[*position] = '\0';
     return 1;
 }
 
@@ -306,3 +311,60 @@ unsigned int fs_ls(char *buffer, unsigned int size)
     return position;
 }
 
+int fs_mkdir(const char *name)
+{
+    unsigned int i;
+
+    if (name == 0 || name[0] == '\0' || current == 0) {
+        return 0;
+    }
+
+    if (current->type != FS_DIRECTORY) {
+        return 0;
+    }
+
+    if (name[0] == '/') {
+        return 0;
+    }
+
+    for (i = 0; name[i] != '\0'; i++) {
+        if (i >= FS_NAME_MAX - 1 || name[i] == '/') {
+            return 0;
+        }
+    }
+
+    if (fs_name_equal(name, ".") ||
+        fs_name_equal(name, "..")) {
+        return 0;
+    }
+
+    if (fs_find_child(current, name) != 0) {
+        return 0;
+    }
+
+    return fs_create(current, name, FS_DIRECTORY) != 0;
+}
+
+int fs_cat(const char *name, char *buffer, unsigned int size)
+{
+    fs_node_t *node;
+    unsigned int i = 0;
+
+    if (name == 0 || buffer == 0 || size == 0 || current == 0) {
+        return 0;
+    }
+
+    node = fs_find_child(current, name);
+
+    if (node == 0 || node->type != FS_FILE) {
+        return 0;
+    }
+
+    while (node->content[i] != '\0' && i < size - 1) {
+        buffer[i] = node->content[i];
+        i++;
+    }
+
+    buffer[i] = '\0';
+    return 1;
+}

@@ -25,5 +25,6 @@ fs_node_t *fs_current(void);
 int fs_cd(const char *path);
 void fs_pwd(char *buffer, unsigned int size);
 unsigned int fs_ls(char *buffer, unsigned int size);
-
+int fs_mkdir(const char *name);
+int fs_cat(const char *name, char *buffer, unsigned int size);
 #endif
