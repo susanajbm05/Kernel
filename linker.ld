@@ -4,44 +4,28 @@ SECTIONS
 {
     . = 1M;
 
-    .text :
+    .text ALIGN(4K) :
     {
-<<<<<<< HEAD
         KEEP(*(.multiboot))
         *(.text*)
-=======
-        *(.multiboot)
-        *(.text)
->>>>>>> f8cd8fc (Agrega nuevo archivo del kernel)
     }
 
-    .rodata :
+    .rodata ALIGN(4K) :
     {
-<<<<<<< HEAD
         *(.rodata*)
-=======
-        *(.rodata)
->>>>>>> f8cd8fc (Agrega nuevo archivo del kernel)
     }
 
-    .data :
+    .data ALIGN(4K) :
     {
-<<<<<<< HEAD
         *(.data*)
-=======
-        *(.data)
->>>>>>> f8cd8fc (Agrega nuevo archivo del kernel)
     }
 
-    .bss :
+    .bss ALIGN(4K) :
     {
-<<<<<<< HEAD
         *(COMMON)
         *(.bss*)
     }
-}
-=======
-        *(.bss)
-    }
-}
 
+    . = ALIGN(4K);
+    kernel_end = .;
+}

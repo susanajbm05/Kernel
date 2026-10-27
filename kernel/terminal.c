@@ -1,0 +1,130 @@
+
+#include "terminal.h"
+#include "keyboard.h"
+#include "serial.h"
+
+#define VGA_ADDRESS 0xB8000
+#define VGA_WIDTH 80
+#define VGA_HEIGHT 25
+
+static volatile char* video = (volatile char*) VGA_ADDRESS;
+static int fila = 0;
+static int columna = 0;
+static unsigned char color = 0x0F;
+
+void terminal_clear(void)
+{
+    for (int y = 0; y < VGA_HEIGHT; y++)
+    {
+        for (int x = 0; x < VGA_WIDTH; x++)
+        {
+            int posicion = (y * VGA_WIDTH + x) * 2;
+            video[posicion] = ' ';
+            video[posicion + 1] = color;
+        }
+    }
+
+    fila = 0;
+    columna = 0;
+}
+
+void terminal_newline(void)
+{
+    columna = 0;
+    fila++;
+
+    if (fila >= VGA_HEIGHT)
+    {
+        terminal_clear();
+    }
+}
+
+void terminal_putchar(char c)
+{
+
+    serial_putchar(c);
+    if (c == '\n')
+    {
+        terminal_newline();
+        return;
+    }
+
+    if (c == '\b')
+    {
+        if (columna > 0)
+        {
+            columna--;
+
+            int posicion = (fila * VGA_WIDTH + columna) * 2;
+            video[posicion] = ' ';
+            video[posicion + 1] = color;
+        }
+
+        return;
+    }
+
+    int posicion = (fila * VGA_WIDTH + columna) * 2;
+
+    video[posicion] = c;
+    video[posicion + 1] = color;
+
+    columna++;
+
+    if (columna >= VGA_WIDTH)
+    {
+        terminal_newline();
+    }
+}
+
+void terminal_print(const char* texto)
+{
+    for (int i = 0; texto[i] != '\0'; i++)
+    {
+        terminal_putchar(texto[i]);
+    }
+}
+
+void terminal_readline(char *buffer, unsigned int max_length)
+{
+    if (buffer == 0 || max_length == 0)
+    {
+        return;
+    }
+
+    unsigned int length = 0;
+
+    while (1)
+    {
+        char c = serial_getchar();
+
+        if (c == '\0')
+        {
+            continue;
+        }
+
+        if (c == '\n')
+        {
+            buffer[length] = '\0';
+            terminal_putchar('\n');
+            return;
+        }
+
+        if (c == '\b')
+        {
+            if (length > 0)
+            {
+                length--;
+                terminal_putchar('\b');
+            }
+
+            continue;
+        }
+
+        if (length + 1 < max_length)
+        {
+            buffer[length] = c;
+            length++;
+            terminal_putchar(c);
+        }
+    }
+}
