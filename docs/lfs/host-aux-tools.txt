@@ -1,0 +1,22 @@
+===== HERRAMIENTAS AUXILIARES =====
+jue 29 oct 2026 22:22:42 CST
+[OK] ld: /usr/bin/ld
+[OK] as: /usr/bin/as
+[OK] ar: /usr/bin/ar
+[OK] nm: /usr/bin/nm
+[OK] objcopy: /usr/bin/objcopy
+[OK] readelf: /usr/bin/readelf
+[OK] file: /usr/bin/file
+[OK] bzip2: /usr/bin/bzip2
+[OK] gzip: /usr/bin/gzip
+[OK] xz: /usr/bin/xz
+[OK] zstd: /usr/bin/zstd
+[OK] wget: /usr/bin/wget
+[NO INSTALADO] curl
+[OK] python3: /usr/bin/python3
+[OK] perl: /usr/bin/perl
+[NO INSTALADO] pkg-config
+
+===== VERSIONES BINUTILS =====
+GNU ld (GNU Binutils for Ubuntu) 2.46
+Ensamblador GNU (GNU Binutils for Ubuntu) 2.46

@@ -1,0 +1,20 @@
+===== BZIP2 =====
+bzip2, a block-sorting file compressor.  Version 1.0.8, 13-Jul-2019.
+
+===== GLIBC =====
+ldd (Ubuntu GLIBC 2.43-2ubuntu2.4) 2.43
+
+===== COREUTILS =====
+chown (uutils coreutils) 0.8.0
+
+===== ENLACE /BIN/SH =====
+lrwxrwxrwx 1 root root 4 Feb  2  2026 /bin/sh -> dash
+/usr/bin/dash
+
+===== ENLACE AWK =====
+lrwxrwxrwx 1 root root 21 Feb  3  2026 /usr/bin/awk -> /etc/alternatives/awk
+/usr/bin/gawk
+
+===== ENLACE YACC =====
+lrwxrwxrwx 1 root root 22 Sep 16 07:14 /usr/bin/yacc -> /etc/alternatives/yacc
+/usr/bin/bison.yacc

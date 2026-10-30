@@ -1,0 +1,16 @@
+REGISTRO DE VERSIONES - ONYX OS
+Fecha: jue 29 oct 2026 22:14:59 CST
+
+Linux Kernel-vm 7.0.0-34-generic #34-Ubuntu SMP PREEMPT_DYNAMIC Wed Sep  2 14:29:37 UTC 2026 x86_64 GNU/Linux
+
+GNU bash, versión 5.3.9(1)-release (x86_64-pc-linux-gnu)
+gcc (Ubuntu 15.2.0-16ubuntu1) 15.2.0
+g++ (Ubuntu 15.2.0-16ubuntu1) 15.2.0
+GNU Make 4.4.1
+GNU ld (GNU Binutils for Ubuntu) 2.46
+bison (GNU Bison) 3.8.2
+GNU Awk 5.3.2, API 4.0, PMA Avon 8-g1, (GNU MPFR 4.2.2, GNU MP 6.3.0)
+m4 (GNU M4) 1.4.21
+texi2any (GNU texinfo) 7.2
+Python 3.14.4
+This is perl 5, version 40, subversion 1 (v5.40.1) built for x86_64-linux-gnu-thread-multi
