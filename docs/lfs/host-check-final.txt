@@ -31,9 +31,8 @@ Arquitectura: x86_64
 [OK] chown: /usr/bin/chown
 
 ===== ENLACES SIMBOLICOS =====
-/bin/sh -> /usr/bin/dash
-[ERROR] /bin/sh no apunta a Bash
-[OBSERVACION] Bash esta instalado en /bin/bash; no se modifico el enlace del sistema anfitrion
+/bin/sh -> /usr/bin/bash
+[OK] /bin/sh apunta a Bash
 /usr/bin/awk -> /usr/bin/gawk
 [OK] awk apunta a Gawk
 /usr/bin/yacc -> /usr/bin/bison.yacc
@@ -72,16 +71,16 @@ Version: 7.0.0-34-generic
 [OK] G++ compila un programa de prueba
 
 ===== RECURSOS DEL ANFITRION =====
-Procesadores: 2
+Procesadores: 3
                total        used        free      shared  buff/cache   available
-Mem:           3.3Gi       1.3Gi       557Mi        52Mi       1.7Gi       2.0Gi
-Swap:          3.8Gi       636Ki       3.8Gi
+Mem:           5.3Gi       1.3Gi       2.0Gi        51Mi       2.3Gi       4.0Gi
+Swap:          3.8Gi          0B       3.8Gi
 [OBSERVACION] Menos de 4 nucleos: la compilacion puede tardar mas
 [OBSERVACION] Menos de 8 GB de RAM: la compilacion puede tardar mas
 
 ==========================================
  RESULTADO DE VALIDACION
-Errores: 1
-Observaciones: 3
-RESULTADO: VALIDACION CON INCUMPLIMIENTOS
+Errores: 0
+Observaciones: 2
+RESULTADO: REQUISITOS TECNICOS DETECTADOS
 ==========================================

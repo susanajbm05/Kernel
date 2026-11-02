@@ -23,7 +23,7 @@ OK:    Linux Kernel supports UNIX 98 PTY
 Aliases:
 OK:    awk  is GNU
 OK:    yacc is Bison
-ERROR: sh   is NOT Bash
+OK:    sh   is Bash
 Compiler check:
 OK:    g++ works
-OK: nproc reports 2 logical cores are available
+OK: nproc reports 3 logical cores are available
