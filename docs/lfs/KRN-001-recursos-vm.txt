@@ -1,0 +1,56 @@
+Evidencias KRN-001 - dom 01 nov 2026 19:45:18 CST
+
+=== Sistema y arquitectura ===
+Distributor ID:	Ubuntu
+Description:	Ubuntu 26.04.1 LTS
+Release:	26.04
+Codename:	resolute
+x86_64
+
+=== CPU y memoria ===
+3
+               total       usado       libre  compartido   búf/caché  disponible
+Mem:           5.3Gi       1.2Gi       2.2Gi        50Mi       2.1Gi       4.0Gi
+Inter:         3.8Gi          0B       3.8Gi
+
+=== Particiones ===
+NAME   FSTYPE   FSVER LABEL UUID                                 FSAVAIL FSUSE% MOUNTPOINTS
+loop0  squashfs 4.0                                                    0   100% /snap/bare/5
+loop1  squashfs 4.0                                                    0   100% /snap/desktop-security-center/206
+loop2  squashfs 4.0                                                    0   100% /snap/firefox/8763
+loop3  squashfs 4.0                                                    0   100% /snap/core24/1643
+loop4  squashfs 4.0                                                    0   100% /snap/firmware-updater/226
+loop5  squashfs 4.0                                                    0   100% /snap/desktop-security-center/188
+loop6  squashfs 4.0                                                    0   100% /snap/core24/2124
+loop7  squashfs 4.0                                                    0   100% /snap/gnome-46-2404/164
+loop8  squashfs 4.0                                                    0   100% /snap/prompting-client/222
+loop9  squashfs 4.0                                                    0   100% /snap/hwctl/123
+loop10 squashfs 4.0                                                    0   100% /snap/gtk-common-themes/1535
+loop11 squashfs 4.0                                                    0   100% /snap/prompting-client/228
+loop12 squashfs 4.0                                                    0   100% /snap/hwctl/131
+loop13 squashfs 4.0                                                    0   100% /snap/mesa-2404/1839
+loop14 squashfs 4.0                                                    0   100% /snap/snap-store/1390
+loop15 squashfs 4.0                                                    0   100% /snap/snap-store/1427
+loop16 squashfs 4.0                                                    0   100% /snap/snapd-desktop-integration/391
+loop17 squashfs 4.0                                                    0   100% /snap/snapd/27710
+loop18 squashfs 4.0                                                    0   100% /snap/snapd/28254
+sda
+├─sda1
+├─sda2 ext4     1.0         34174626-43f9-408a-b140-66cc60d40b89   26.1G    29% /
+└─sda3 ext4     1.0         c47c26f5-f40e-43e9-800f-d7e17d76df86
+
+=== Espacio de Ubuntu ===
+S.ficheros     Tamaño Usados  Disp Uso% Montado en
+/dev/sda2         40G    12G   27G  31% /
+
+=== Tabla de particiones ===
+Modelo: ATA VBOX HARDDISK (scsi)
+Disco /dev/sda: 85.9GB
+Tamaño de sector (lógico/físico): 512B/512B
+Tabla de particiones: gpt
+Banderas de disco:
+
+Número  Inicio  Fin     Tamaño  Sistema de archivos  Nombre  Banderas
+ 1      1049kB  2097kB  1049kB                               grub_bios
+ 2      2097kB  43.0GB  42.9GB  ext4
+ 3      43.0GB  85.9GB  42.9GB  ext4                 LFS
