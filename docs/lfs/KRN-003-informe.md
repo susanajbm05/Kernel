@@ -37,6 +37,12 @@ que finalizó correctamente.
 - /bin/sh apunta a Bash.
 - /usr/bin/awk apunta a Gawk.
 - /usr/bin/yacc ejecuta Bison.
+
+Los registros iniciales muestran que el enlace /bin/sh
+apuntaba a Dash. Posteriormente se ajustó para utilizar Bash
+y se repitieron las comprobaciones, obteniendo resultados
+satisfactorios, como se refleja en las evidencias finales.
+
 - El sistema de archivos devpts está montado.
 - El dispositivo /dev/ptmx está disponible.
 - El kernel supera la versión mínima indicada para LFS.
