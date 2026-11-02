@@ -1,0 +1,60 @@
+======================================
+ ONYX OS - LFS HOST CHECK
+======================================
+
+Sistema anfitrión:
+Linux Kernel-vm 7.0.0-34-generic #34-Ubuntu SMP PREEMPT_DYNAMIC Wed Sep  2 14:29:37 UTC 2026 x86_64 GNU/Linux
+
+Distribución:
+PRETTY_NAME="Ubuntu 26.04.1 LTS"
+NAME="Ubuntu"
+VERSION_ID="26.04"
+VERSION="26.04.1 LTS (Resolute Raccoon)"
+VERSION_CODENAME=resolute
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=resolute
+LOGO=ubuntu-logo
+
+Arquitectura:
+x86_64
+
+Herramientas requeridas:
+[OK] bash         /usr/bin/bash
+[OK] bison        /usr/bin/bison
+[OK] coreutils    /usr/bin/coreutils
+[OK] diff         /usr/bin/diff
+[OK] find         /usr/bin/find
+[OK] gawk         /usr/bin/gawk
+[OK] gcc          /usr/bin/gcc
+[OK] g++          /usr/bin/g++
+[OK] grep         /usr/bin/grep
+[OK] gzip         /usr/bin/gzip
+[OK] m4           /usr/bin/m4
+[OK] make         /usr/bin/make
+[OK] patch        /usr/bin/patch
+[OK] perl         /usr/bin/perl
+[OK] python3      /usr/bin/python3
+[OK] sed          /usr/bin/sed
+[OK] tar          /usr/bin/tar
+[OK] makeinfo     /usr/bin/makeinfo
+[OK] xz           /usr/bin/xz
+
+Versiones principales:
+GNU bash, versión 5.3.9(1)-release (x86_64-pc-linux-gnu)
+gcc (Ubuntu 15.2.0-16ubuntu1) 15.2.0
+g++ (Ubuntu 15.2.0-16ubuntu1) 15.2.0
+GNU Make 4.4.1
+GNU ld (GNU Binutils for Ubuntu) 2.46
+bison (GNU Bison) 3.8.2
+Python 3.14.4
+This is perl 5, version 40, subversion 1 (v5.40.1) built for x86_64-linux-gnu-thread-multi
+texi2any (GNU texinfo) 7.2
+
+======================================
+RESULTADO: Herramientas detectadas.
+======================================

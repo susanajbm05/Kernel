@@ -1,0 +1,86 @@
+==========================================
+ ONYX OS - VALIDACION DEL HOST LFS 13.1
+==========================================
+
+===== SISTEMA ANFITRION =====
+Linux Kernel-vm 7.0.0-34-generic #34-Ubuntu SMP PREEMPT_DYNAMIC Wed Sep  2 14:29:37 UTC 2026 x86_64 GNU/Linux
+Distribucion: Ubuntu 26.04.1 LTS
+Arquitectura: x86_64
+
+===== HERRAMIENTAS LFS =====
+[OK] bash: /usr/bin/bash
+[OK] bison: /usr/bin/bison
+[OK] bzip2: /usr/bin/bzip2
+[OK] diff: /usr/bin/diff
+[OK] find: /usr/bin/find
+[OK] gawk: /usr/bin/gawk
+[OK] gcc: /usr/bin/gcc
+[OK] g++: /usr/bin/g++
+[OK] grep: /usr/bin/grep
+[OK] gzip: /usr/bin/gzip
+[OK] ld: /usr/bin/ld
+[OK] m4: /usr/bin/m4
+[OK] make: /usr/bin/make
+[OK] patch: /usr/bin/patch
+[OK] perl: /usr/bin/perl
+[OK] python3: /usr/bin/python3
+[OK] sed: /usr/bin/sed
+[OK] tar: /usr/bin/tar
+[OK] makeinfo: /usr/bin/makeinfo
+[OK] xz: /usr/bin/xz
+[OK] chown: /usr/bin/chown
+
+===== ENLACES SIMBOLICOS =====
+/bin/sh -> /usr/bin/bash
+[OK] /bin/sh apunta a Bash
+/usr/bin/awk -> /usr/bin/gawk
+[OK] awk apunta a Gawk
+/usr/bin/yacc -> /usr/bin/bison.yacc
+[OK] yacc ejecuta Bison
+
+===== VERSIONES PRINCIPALES =====
+bash         GNU bash, version 5.3.9(1)-release (x86_64-pc-linux-gnu)
+bison        bison (GNU Bison) 3.8.2
+gcc          gcc (Ubuntu 15.2.0-16ubuntu1) 15.2.0
+g++          g++ (Ubuntu 15.2.0-16ubuntu1) 15.2.0
+ld           GNU ld (GNU Binutils for Ubuntu) 2.46
+make         GNU Make 4.4.1
+gawk         GNU Awk 5.3.2, API 4.0, PMA Avon 8-g1, (GNU MPFR 4.2.2, GNU MP 6.3.0)
+m4           m4 (GNU M4) 1.4.21
+perl         Perl v5.40.1
+python3      Python 3.14.4
+sed          sed (GNU sed) 4.9
+tar          tar (GNU tar) 1.35
+makeinfo     texi2any (GNU texinfo) 7.2
+xz           xz (XZ Utils) 5.8.3
+bzip2        bzip2, a block-sorting file compressor.  Version 1.0.8, 13-Jul-2019.
+diff         diff (GNU diffutils) 3.12
+find         find (GNU findutils) 4.10.0
+grep         grep (GNU grep) 3.12
+gzip         gzip 1.14
+
+===== KERNEL =====
+Version: 7.0.0-34-generic
+[OK] Kernel igual o superior a 5.10
+
+===== SOPORTE PTY =====
+[OK] Sistema de archivos devpts montado
+[OK] /dev/ptmx existe como dispositivo
+
+===== PRUEBA DE COMPILACION C++ =====
+[OK] G++ compila un programa de prueba
+
+===== RECURSOS DEL ANFITRION =====
+Procesadores: 3
+               total        used        free      shared  buff/cache   available
+Mem:           5.3Gi       1.3Gi       2.0Gi        51Mi       2.3Gi       4.0Gi
+Swap:          3.8Gi          0B       3.8Gi
+[OBSERVACION] Menos de 4 nucleos: la compilacion puede tardar mas
+[OBSERVACION] Menos de 8 GB de RAM: la compilacion puede tardar mas
+
+==========================================
+ RESULTADO DE VALIDACION
+Errores: 0
+Observaciones: 2
+RESULTADO: REQUISITOS TECNICOS DETECTADOS
+==========================================

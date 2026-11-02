@@ -1,0 +1,21 @@
+===== ENLACES Y HERRAMIENTAS LFS =====
+jue 29 oct 2026 22:20:51 CST
+
+SH:
+/usr/bin/dash
+sh funciona correctamente
+
+AWK:
+/usr/bin/gawk
+GNU Awk 5.3.2, API 4.0, PMA Avon 8-g1, (GNU MPFR 4.2.2, GNU MP 6.3.0)
+
+YACC:
+/usr/bin/bison.yacc
+bison (GNU Bison) 3.8.2
+
+PTY:
+devpts on /dev/pts type devpts (rw,nosuid,noexec,relatime,gid=5,mode=600,ptmxmode=000)
+crw-rw-rw- 1 root tty 5, 2 Oct 29 22:20 /dev/ptmx
+
+COMPILADOR C++:
+Código de compilación: 0
