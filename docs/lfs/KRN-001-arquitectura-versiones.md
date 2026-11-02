@@ -47,8 +47,13 @@ podría requerir más almacenamiento.
 
 ## 6. Estado
 
-Arquitectura, versiones y recursos de la máquina virtual registrados.
-La partición dedicada para LFS fue creada y verificada.
+- Arquitectura objetivo x86_64 definida.
+- Versiones LFS 13.1-systemd y BLFS 13.1-systemd seleccionadas.
+- Recursos de la máquina virtual documentados.
+- Partición dedicada para LFS creada y verificada.
+- Evidencias de configuración guardadas en `KRN-001-recursos-vm.txt`.
+- La instalación de LFS todavía no ha comenzado.
 
-Pendiente actualizar las evidencias finales y revisar los criterios
-de aceptación para cerrar KRN-001.
+La arquitectura, las versiones y la configuración de almacenamiento
+quedan documentadas para servir como referencia en las tareas
+dependientes de KRN-001.
