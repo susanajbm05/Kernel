@@ -1,0 +1,4 @@
+9.8G	/mnt/lfs/sources
+1.8G	/mnt/lfs/tools
+308M	/mnt/lfs/usr
+15G	/mnt/lfs
