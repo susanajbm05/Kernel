@@ -1,0 +1,433 @@
+make[1]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2'
+make[2]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp'
+make  all-recursive
+make[3]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp'
+Making all in tests
+make[4]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp/tests'
+Making all in .
+make[5]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp/tests'
+make[5]: Nothing to be done for 'all-am'.
+make[5]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp/tests'
+Making all in devel
+make[5]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp/tests/devel'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp/tests/devel'
+Making all in mpn
+make[5]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp/tests/mpn'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp/tests/mpn'
+Making all in mpz
+make[5]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp/tests/mpz'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp/tests/mpz'
+Making all in mpq
+make[5]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp/tests/mpq'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp/tests/mpq'
+Making all in mpf
+make[5]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp/tests/mpf'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp/tests/mpf'
+Making all in rand
+make[5]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp/tests/rand'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp/tests/rand'
+Making all in misc
+make[5]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp/tests/misc'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp/tests/misc'
+Making all in cxx
+make[5]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp/tests/cxx'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp/tests/cxx'
+make[4]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp/tests'
+Making all in mpn
+make[4]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp/mpn'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp/mpn'
+Making all in mpz
+make[4]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp/mpz'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp/mpz'
+Making all in mpq
+make[4]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp/mpq'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp/mpq'
+Making all in mpf
+make[4]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp/mpf'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp/mpf'
+Making all in printf
+make[4]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp/printf'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp/printf'
+Making all in scanf
+make[4]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp/scanf'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp/scanf'
+Making all in rand
+make[4]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp/rand'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp/rand'
+Making all in cxx
+make[4]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp/cxx'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp/cxx'
+Making all in demos
+make[4]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp/demos'
+Making all in calc
+make[5]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp/demos/calc'
+make  all-am
+make[6]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp/demos/calc'
+make[6]: Nothing to be done for 'all-am'.
+make[6]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp/demos/calc'
+make[5]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp/demos/calc'
+Making all in expr
+make[5]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp/demos/expr'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp/demos/expr'
+make[5]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp/demos'
+make[5]: Nothing to be done for 'all-am'.
+make[5]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp/demos'
+make[4]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp/demos'
+Making all in tune
+make[4]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp/tune'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp/tune'
+Making all in doc
+make[4]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp/doc'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp/doc'
+make[4]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp'
+make[4]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp'
+make[3]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp'
+make[2]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gmp'
+make[2]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/mpfr'
+Making all in doc
+make[3]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/mpfr/doc'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/mpfr/doc'
+Making all in src
+make[3]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/mpfr/src'
+make  all-am
+make[4]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/mpfr/src'
+make[4]: Nothing to be done for 'all-am'.
+make[4]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/mpfr/src'
+make[3]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/mpfr/src'
+Making all in tests
+make[3]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/mpfr/tests'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/mpfr/tests'
+Making all in tune
+make[3]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/mpfr/tune'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/mpfr/tune'
+Making all in tools/bench
+make[3]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/mpfr/tools/bench'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/mpfr/tools/bench'
+make[3]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/mpfr'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/mpfr'
+make[2]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/mpfr'
+make[2]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/mpc'
+make  all-recursive
+make[3]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/mpc'
+Making all in src
+make[4]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/mpc/src'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/mpc/src'
+Making all in tests
+make[4]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/mpc/tests'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/mpc/tests'
+Making all in doc
+make[4]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/mpc/doc'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/mpc/doc'
+Making all in tools
+make[4]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/mpc/tools'
+Making all in bench
+make[5]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/mpc/tools/bench'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/mpc/tools/bench'
+Making all in mpcheck
+make[5]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/mpc/tools/mpcheck'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/mpc/tools/mpcheck'
+make[5]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/mpc/tools'
+make[5]: Nothing to be done for 'all-am'.
+make[5]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/mpc/tools'
+make[4]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/mpc/tools'
+make[4]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/mpc'
+make[4]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/mpc'
+make[3]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/mpc'
+make[2]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/mpc'
+make[2]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/libiberty'
+make[3]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/libiberty/testsuite'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/libiberty/testsuite'
+make[2]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/libiberty'
+make[2]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/lto-plugin'
+make  all-am
+make[3]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/lto-plugin'
+make[3]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/lto-plugin'
+make[2]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/lto-plugin'
+make[2]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/build-x86_64-pc-linux-gnu/libiberty'
+make[3]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/build-x86_64-pc-linux-gnu/libiberty/testsuite'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/build-x86_64-pc-linux-gnu/libiberty/testsuite'
+make[2]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/build-x86_64-pc-linux-gnu/libiberty'
+make[2]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/build-x86_64-pc-linux-gnu/libcpp'
+test -f config.h || (rm -f stamp-h1 && make stamp-h1)
+make[2]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/build-x86_64-pc-linux-gnu/libcpp'
+make[2]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/zlib'
+true "AR_FLAGS=rc" "CC_FOR_BUILD=gcc" "CFLAGS=-g -O2    " "CXXFLAGS=-g -O2    " "CFLAGS_FOR_BUILD=" "CFLAGS_FOR_TARGET=-g -O2" "INSTALL=/usr/bin/install -c" "INSTALL_DATA=/usr/bin/install -c -m 644" "INSTALL_PROGRAM=/usr/bin/install -c" "INSTALL_SCRIPT=/usr/bin/install -c" "LDFLAGS=-static-libstdc++ -static-libgcc " "LIBCFLAGS=-g -O2  " "LIBCFLAGS_FOR_TARGET=-g -O2" "MAKE=make" "MAKEINFO=/mnt/lfs/sources/gcc-16.2.0/missing makeinfo --split-size=5000000 --split-size=5000000 " "PICFLAG=" "PICFLAG_FOR_TARGET=" "SHELL=/bin/bash" "EXPECT=expect" "RUNTEST=runtest" "RUNTESTFLAGS=" "exec_prefix=/usr" "infodir=/usr/share/info" "libdir=/usr/lib" "prefix=/usr" "tooldir=/usr/x86_64-lfs-linux-gnu" "AR=x86_64-lfs-linux-gnu-ar --plugin /mnt/lfs/tools/libexec/gcc/x86_64-lfs-linux-gnu/16.2.0/liblto_plugin.so" "AS=x86_64-lfs-linux-gnu-as" "CC=x86_64-lfs-linux-gnu-gcc" "CXX=x86_64-lfs-linux-gnu-g++" "LD=/mnt/lfs/tools/lib/gcc/x86_64-lfs-linux-gnu/16.2.0/../../../../x86_64-lfs-linux-gnu/bin/ld" "LIBCFLAGS=-g -O2  " "NM=x86_64-lfs-linux-gnu-nm --plugin /mnt/lfs/tools/libexec/gcc/x86_64-lfs-linux-gnu/16.2.0/liblto_plugin.so" "PICFLAG=" "RANLIB=x86_64-lfs-linux-gnu-ranlib --plugin /mnt/lfs/tools/libexec/gcc/x86_64-lfs-linux-gnu/16.2.0/liblto_plugin.so" "DESTDIR=" DO=all multi-do # make
+make[2]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/zlib'
+make[2]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/libbacktrace'
+make  all-am
+make[3]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/libbacktrace'
+true  DO=all multi-do # make
+make[3]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/libbacktrace'
+make[2]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/libbacktrace'
+make[2]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/libcpp'
+test -f config.h || (rm -f stamp-h1 && make stamp-h1)
+make[2]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/libcpp'
+make[2]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/libcody'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/libcody'
+make[2]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/libdecnumber'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/libdecnumber'
+make[2]: Entering directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gcc'
+x86_64-lfs-linux-gnu-g++  -fno-PIE -c   -g -O2     -DIN_GCC    -fno-exceptions -fno-rtti -fasynchronous-unwind-tables -W -Wall -Wno-error=narrowing -Wwrite-strings -Wcast-qual -Wmissing-format-attribute -Wconditionally-supported -Woverloaded-virtual -pedantic -Wno-long-long -Wno-variadic-macros -Wno-overlength-strings  -DHAVE_CONFIG_H -fno-PIE -I. -I. -I../../gcc -I../../gcc/. -I../../gcc/../include  -I../../gcc/../libcpp/include -I../../gcc/../libcody -I/mnt/lfs/sources/gcc-16.2.0/build-pass2/./gmp -I/mnt/lfs/sources/gcc-16.2.0/gmp -I/mnt/lfs/sources/gcc-16.2.0/build-pass2/./mpfr/src -I/mnt/lfs/sources/gcc-16.2.0/mpfr/src -I/mnt/lfs/sources/gcc-16.2.0/mpc/src  -I../../gcc/../libdecnumber -I../../gcc/../libdecnumber/bid -I../libdecnumber -I../../gcc/../libbacktrace   -o options.o -MT options.o -MMD -MP -MF ./.deps/options.TPo options.cc
+options.cc:27216:2: error: #error 0Wabsolute-value does not have a Var() flag
+27216 | #error 0Wabsolute-value does not have a Var() flag
+      |  ^~~~~
+options.cc:27292:2: error: #error 0Wexpansion-to-defined does not have a Var() flag
+27292 | #error 0Wexpansion-to-defined does not have a Var() flag
+      |  ^~~~~
+options.cc:27296:2: error: #error 0Wmaybe-uninitialized does not have a Var() flag
+27296 | #error 0Wmaybe-uninitialized does not have a Var() flag
+      |  ^~~~~
+options.cc:27300:2: error: #error 0Wshadow-ivar does not have a Var() flag
+27300 | #error 0Wshadow-ivar does not have a Var() flag
+      |  ^~~~~
+options.cc:27308:2: error: #error 0Wshadow=compatible-local does not have a Var() flag
+27308 | #error 0Wshadow=compatible-local does not have a Var() flag
+      |  ^~~~~
+options.cc:27312:2: error: #error 0Wunused-but-set-parameter= does not have a Var() flag
+27312 | #error 0Wunused-but-set-parameter= does not have a Var() flag
+      |  ^~~~~
+options.cc:27344:2: error: #error 0fexceptions does not have a Var() flag
+27344 | #error 0fexceptions does not have a Var() flag
+      |  ^~~~~
+options.cc:27348:2: error: #error 0frename-registers does not have a Var() flag
+27348 | #error 0frename-registers does not have a Var() flag
+      |  ^~~~~
+options.cc:27356:2: error: #error 0ftest-coverage does not have a Var() flag
+27356 | #error 0ftest-coverage does not have a Var() flag
+      |  ^~~~~
+options.cc:27360:2: error: #error 0ftest-coverage does not have a Var() flag
+27360 | #error 0ftest-coverage does not have a Var() flag
+      |  ^~~~~
+options.cc:27364:2: error: #error 0ftree-loop-vectorize does not have a Var() flag
+27364 | #error 0ftree-loop-vectorize does not have a Var() flag
+      |  ^~~~~
+options.cc:27372:2: error: #error 0funroll-loops does not have a Var() flag
+27372 | #error 0funroll-loops does not have a Var() flag
+      |  ^~~~~
+options.cc:27376:2: error: #error 0fvar-tracking does not have a Var() flag
+27376 | #error 0fvar-tracking does not have a Var() flag
+      |  ^~~~~
+options.cc:27464:2: error: #error 0Wextensions does not have a Var() flag
+27464 | #error 0Wextensions does not have a Var() flag
+      |  ^~~~~
+options.cc:27472:2: error: #error 0Whidden-declarations= does not have a Var() flag
+27472 | #error 0Whidden-declarations= does not have a Var() flag
+      |  ^~~~~
+options.cc:27497:2: error: #error 0Waddress does not have a Var() flag
+27497 | #error 0Waddress does not have a Var() flag
+      |  ^~~~~
+options.cc:27721:2: error: #error 0Walloc-size does not have a Var() flag
+27721 | #error 0Walloc-size does not have a Var() flag
+      |  ^~~~~
+options.cc:27745:2: error: #error 0Wdangling-else does not have a Var() flag
+27745 | #error 0Wdangling-else does not have a Var() flag
+      |  ^~~~~
+options.cc:27749:2: error: #error 0Wendif-labels does not have a Var() flag
+27749 | #error 0Wendif-labels does not have a Var() flag
+      |  ^~~~~
+options.cc:27773:2: error: #error 0Wenum-compare does not have a Var() flag
+27773 | #error 0Wenum-compare does not have a Var() flag
+      |  ^~~~~
+options.cc:27785:2: error: #error 0Wfloat-conversion does not have a Var() flag
+27785 | #error 0Wfloat-conversion does not have a Var() flag
+      |  ^~~~~
+options.cc:27793:2: error: #error 0Wformat-contains-nul does not have a Var() flag
+27793 | #error 0Wformat-contains-nul does not have a Var() flag
+      |  ^~~~~
+options.cc:27833:2: error: #error 0Wimplicit-function-declaration does not have a Var() flag
+27833 | #error 0Wimplicit-function-declaration does not have a Var() flag
+      |  ^~~~~
+options.cc:27841:2: error: #error 0Wlong-long does not have a Var() flag
+27841 | #error 0Wlong-long does not have a Var() flag
+      |  ^~~~~
+options.cc:27845:2: error: #error 0Wpsabi does not have a Var() flag
+27845 | #error 0Wpsabi does not have a Var() flag
+      |  ^~~~~
+options.cc:27849:2: error: #error 0Wunused-const-variable= does not have a Var() flag
+27849 | #error 0Wunused-const-variable= does not have a Var() flag
+      |  ^~~~~
+options.cc:27853:2: error: #error 0Wunused-variable does not have a Var() flag
+27853 | #error 0Wunused-variable does not have a Var() flag
+      |  ^~~~~
+options.cc:27857:2: error: #error 0Wvariadic-macros does not have a Var() flag
+27857 | #error 0Wvariadic-macros does not have a Var() flag
+      |  ^~~~~
+options.cc:27882:2: error: #error 0Waddress does not have a Var() flag
+27882 | #error 0Waddress does not have a Var() flag
+      |  ^~~~~
+options.cc:28146:2: error: #error 0Walloc-size does not have a Var() flag
+28146 | #error 0Walloc-size does not have a Var() flag
+      |  ^~~~~
+options.cc:28174:2: error: #error 0Wdangling-else does not have a Var() flag
+28174 | #error 0Wdangling-else does not have a Var() flag
+      |  ^~~~~
+options.cc:28178:2: error: #error 0Wdelete-non-virtual-dtor does not have a Var() flag
+28178 | #error 0Wdelete-non-virtual-dtor does not have a Var() flag
+      |  ^~~~~
+options.cc:28186:2: error: #error 0Wendif-labels does not have a Var() flag
+28186 | #error 0Wendif-labels does not have a Var() flag
+      |  ^~~~~
+options.cc:28206:2: error: #error 0Wfloat-conversion does not have a Var() flag
+28206 | #error 0Wfloat-conversion does not have a Var() flag
+      |  ^~~~~
+options.cc:28210:2: error: #error 0Wformat-contains-nul does not have a Var() flag
+28210 | #error 0Wformat-contains-nul does not have a Var() flag
+      |  ^~~~~
+options.cc:28250:2: error: #error 0Wnarrowing does not have a Var() flag
+28250 | #error 0Wnarrowing does not have a Var() flag
+      |  ^~~~~
+options.cc:28254:2: error: #error 0Wnoexcept-type does not have a Var() flag
+28254 | #error 0Wnoexcept-type does not have a Var() flag
+      |  ^~~~~
+options.cc:28262:2: error: #error 0Wnoexcept-type does not have a Var() flag
+28262 | #error 0Wnoexcept-type does not have a Var() flag
+      |  ^~~~~
+options.cc:28266:2: error: #error 0Wunused-variable does not have a Var() flag
+28266 | #error 0Wunused-variable does not have a Var() flag
+      |  ^~~~~
+options.cc:28270:2: error: #error 0Wvariadic-macros does not have a Var() flag
+28270 | #error 0Wvariadic-macros does not have a Var() flag
+      |  ^~~~~
+options.cc:28316:2: error: #error 0Waddress does not have a Var() flag
+28316 | #error 0Waddress does not have a Var() flag
+      |  ^~~~~
+options.cc:28353:2: error: #error 0Waliasing does not have a Var() flag
+28353 | #error 0Waliasing does not have a Var() flag
+      |  ^~~~~
+options.cc:28437:2: error: #error 0Wampersand does not have a Var() flag
+28437 | #error 0Wampersand does not have a Var() flag
+      |  ^~~~~
+options.cc:28445:2: error: #error 0Wcompare-reals does not have a Var() flag
+28445 | #error 0Wcompare-reals does not have a Var() flag
+      |  ^~~~~
+options.cc:28457:2: error: #error 0Wexternal-argument-mismatch does not have a Var() flag
+28457 | #error 0Wexternal-argument-mismatch does not have a Var() flag
+      |  ^~~~~
+options.cc:28461:2: error: #error 0Wrealloc-lhs does not have a Var() flag
+28461 | #error 0Wrealloc-lhs does not have a Var() flag
+      |  ^~~~~
+options.cc:28465:2: error: #error 0fallow-argument-mismatch does not have a Var() flag
+28465 | #error 0fallow-argument-mismatch does not have a Var() flag
+      |  ^~~~~
+options.cc:28511:2: error: #error 0Warray-bounds= does not have a Var() flag
+28511 | #error 0Warray-bounds= does not have a Var() flag
+      |  ^~~~~
+options.cc:28547:2: error: #error 0Wformat-overflow= does not have a Var() flag
+28547 | #error 0Wformat-overflow= does not have a Var() flag
+      |  ^~~~~
+options.cc:28622:2: error: #error 0Waddress does not have a Var() flag
+28622 | #error 0Waddress does not have a Var() flag
+      |  ^~~~~
+options.cc:28846:2: error: #error 0Walloc-size does not have a Var() flag
+28846 | #error 0Walloc-size does not have a Var() flag
+      |  ^~~~~
+options.cc:28870:2: error: #error 0Wdangling-else does not have a Var() flag
+28870 | #error 0Wdangling-else does not have a Var() flag
+      |  ^~~~~
+options.cc:28874:2: error: #error 0Wendif-labels does not have a Var() flag
+28874 | #error 0Wendif-labels does not have a Var() flag
+      |  ^~~~~
+options.cc:28898:2: error: #error 0Wenum-compare does not have a Var() flag
+28898 | #error 0Wenum-compare does not have a Var() flag
+      |  ^~~~~
+options.cc:28910:2: error: #error 0Wfloat-conversion does not have a Var() flag
+28910 | #error 0Wfloat-conversion does not have a Var() flag
+      |  ^~~~~
+options.cc:28918:2: error: #error 0Wformat-contains-nul does not have a Var() flag
+28918 | #error 0Wformat-contains-nul does not have a Var() flag
+      |  ^~~~~
+options.cc:28958:2: error: #error 0Wimplicit-function-declaration does not have a Var() flag
+28958 | #error 0Wimplicit-function-declaration does not have a Var() flag
+      |  ^~~~~
+options.cc:28966:2: error: #error 0Wlong-long does not have a Var() flag
+28966 | #error 0Wlong-long does not have a Var() flag
+      |  ^~~~~
+options.cc:28970:2: error: #error 0Wpsabi does not have a Var() flag
+28970 | #error 0Wpsabi does not have a Var() flag
+      |  ^~~~~
+options.cc:28974:2: error: #error 0Wunused-const-variable= does not have a Var() flag
+28974 | #error 0Wunused-const-variable= does not have a Var() flag
+      |  ^~~~~
+options.cc:28978:2: error: #error 0Wunused-variable does not have a Var() flag
+28978 | #error 0Wunused-variable does not have a Var() flag
+      |  ^~~~~
+options.cc:28982:2: error: #error 0Wvariadic-macros does not have a Var() flag
+28982 | #error 0Wvariadic-macros does not have a Var() flag
+      |  ^~~~~
+options.cc:29007:2: error: #error 0Waddress does not have a Var() flag
+29007 | #error 0Waddress does not have a Var() flag
+      |  ^~~~~
+options.cc:29271:2: error: #error 0Walloc-size does not have a Var() flag
+29271 | #error 0Walloc-size does not have a Var() flag
+      |  ^~~~~
+options.cc:29299:2: error: #error 0Wdangling-else does not have a Var() flag
+29299 | #error 0Wdangling-else does not have a Var() flag
+      |  ^~~~~
+options.cc:29303:2: error: #error 0Wdelete-non-virtual-dtor does not have a Var() flag
+29303 | #error 0Wdelete-non-virtual-dtor does not have a Var() flag
+      |  ^~~~~
+options.cc:29311:2: error: #error 0Wendif-labels does not have a Var() flag
+29311 | #error 0Wendif-labels does not have a Var() flag
+      |  ^~~~~
+options.cc:29331:2: error: #error 0Wfloat-conversion does not have a Var() flag
+29331 | #error 0Wfloat-conversion does not have a Var() flag
+      |  ^~~~~
+options.cc:29335:2: error: #error 0Wformat-contains-nul does not have a Var() flag
+29335 | #error 0Wformat-contains-nul does not have a Var() flag
+      |  ^~~~~
+options.cc:29375:2: error: #error 0Wnarrowing does not have a Var() flag
+29375 | #error 0Wnarrowing does not have a Var() flag
+      |  ^~~~~
+options.cc:29379:2: error: #error 0Wnoexcept-type does not have a Var() flag
+29379 | #error 0Wnoexcept-type does not have a Var() flag
+      |  ^~~~~
+options.cc:29387:2: error: #error 0Wnoexcept-type does not have a Var() flag
+29387 | #error 0Wnoexcept-type does not have a Var() flag
+      |  ^~~~~
+options.cc:29391:2: error: #error 0Wunused-variable does not have a Var() flag
+29391 | #error 0Wunused-variable does not have a Var() flag
+      |  ^~~~~
+options.cc:29395:2: error: #error 0Wvariadic-macros does not have a Var() flag
+29395 | #error 0Wvariadic-macros does not have a Var() flag
+      |  ^~~~~
+options.cc:29420:2: error: #error 0Wunused-const-variable= does not have a Var() flag
+29420 | #error 0Wunused-const-variable= does not have a Var() flag
+      |  ^~~~~
+make[2]: *** [Makefile:1218: options.o] Error 1
+make[2]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2/gcc'
+make[1]: *** [Makefile:4432: all-gcc] Error 2
+make[1]: Leaving directory '/mnt/lfs/sources/gcc-16.2.0/build-pass2'
+make: *** [Makefile:1100: all] Error 2
