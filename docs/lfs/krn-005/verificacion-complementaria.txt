@@ -1,0 +1,40 @@
+KRN-005 - Verificaciones complementarias
+=========================================
+
+Estas verificaciones corresponden a cinco archivos incluidos en wget-list
+que no tienen una entrada propia en el archivo md5sums de stable-systemd.
+
+1. lfs-bootscripts-20250827.tar.xz
+   Tamaño: 34088 bytes
+   MD5 local: c7d954e5bc29704a662d2c10c9cc4952
+   Resultado: coincide con la referencia externa consultada.
+   Descarga: repositorio oficial LFS, directorio development.
+   URL original de wget-list (directorio 13.1): respondió HTTP 404.
+
+2. sysklogd-2.7.2.tar.gz
+   MD5 local: af60786956a2dc84054fbf46652e515e
+   Resultado: coincide con la referencia oficial consultada.
+   Integridad del archivo comprimido: gzip -t sin errores.
+
+3. sysvinit-3.14-consolidated-1.patch
+   MD5 local: 3af8fd8e13cad481eeeaa48be4247445
+   Resultado: idéntico al archivo descargado desde el repositorio
+   oficial de parches LFS mediante comparación cmp.
+   Nota: la copia local y la copia oficial son idénticas.
+
+4. sysvinit-3.14.tar.xz
+   MD5 local: bc6890b975d19dc9db42d0c7364dd092
+   Resultado: coincide con la referencia oficial consultada.
+   Integridad del archivo comprimido: xz -t sin errores.
+
+5. udev-lfs-20230818.tar.xz
+   MD5 local: acd4360d8a5c3ef320b9db88d275dae6
+   Resultado: coincide con una referencia histórica consultada.
+   Integridad del archivo comprimido: xz -t sin errores.
+   Pendiente: justificar su inclusión en el conjunto de LFS 13.1-systemd.
+
+IMPORTANTE:
+- Estas verificaciones complementan, pero no modifican, md5sums.
+- No se atribuye al manifiesto stable-systemd un checksum que no contiene.
+- Los resultados de compresión comprueban la integridad estructural
+  de los archivos, no su autenticidad de origen.
