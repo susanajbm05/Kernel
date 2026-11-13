@@ -38,7 +38,7 @@ jinja2-3.1.6.tar.gz,Fuente,https://pypi.org/packages/source/J/Jinja2/jinja2-3.1.
 kbd-2.10.0.tar.xz,Fuente,https://www.kernel.org/pub/linux/utils/kbd/kbd-2.10.0.tar.xz,1788500,Descargado
 kmod-34.2.tar.xz,Fuente,https://www.kernel.org/pub/linux/utils/kernel/kmod/kmod-34.2.tar.xz,443748,Descargado
 less-704.tar.gz,Fuente,https://www.greenwoodsoftware.com/less/less-704.tar.gz,996650,Descargado
-lfs-bootscripts-20250827.tar.xz,Fuente,https://www.linuxfromscratch.org/lfs/downloads/13.1/lfs-bootscripts-20250827.tar.xz,,Faltante
+lfs-bootscripts-20250827.tar.xz,Fuente,https://www.linuxfromscratch.org/lfs/downloads/development/lfs-bootscripts-20250827.tar.xz,34088,Descargado; MD5 complementario coincidente
 libcap-2.78.tar.xz,Fuente,https://www.kernel.org/pub/linux/libs/security/linux-privs/libcap2/libcap-2.78.tar.xz,201040,Descargado
 libffi-3.8.0.tar.gz,Fuente,https://github.com/libffi/libffi/releases/download/v3.8.0/libffi-3.8.0.tar.gz,1581626,Descargado
 libpipeline-1.5.8.tar.gz,Fuente,https://download.savannah.gnu.org/releases/libpipeline/libpipeline-1.5.8.tar.gz,1070254,Descargado
@@ -73,16 +73,16 @@ setuptools-84.0.0.tar.gz,Fuente,https://pypi.org/packages/source/s/setuptools/se
 shadow-4.20.2.tar.xz,Fuente,https://github.com/shadow-maint/shadow/releases/download/4.20.2/shadow-4.20.2.tar.xz,2291052,Descargado
 sqlite-autoconf-3530400.tar.gz,Fuente,https://sqlite.org/2026/sqlite-autoconf-3530400.tar.gz,3283177,Descargado
 sqlite-doc-3530400.zip,Fuente,https://sqlite.org/2026/sqlite-doc-3530400.zip,11820412,Descargado
-sysklogd-2.7.2.tar.gz,Fuente,https://github.com/troglobit/sysklogd/releases/download/v2.7.2/sysklogd-2.7.2.tar.gz,484398,Descargado
+sysklogd-2.7.2.tar.gz,Fuente,https://github.com/troglobit/sysklogd/releases/download/v2.7.2/sysklogd-2.7.2.tar.gz,484398,Descargado; MD5 oficial coincidente
 systemd-261.2.tar.gz,Fuente,https://github.com/systemd/systemd/archive/v261.2/systemd-261.2.tar.gz,18456346,Descargado
 systemd-man-pages-261.2.tar.xz,Fuente,https://anduin.linuxfromscratch.org/LFS/systemd-man-pages-261.2.tar.xz,821528,Descargado
-sysvinit-3.14.tar.xz,Fuente,https://github.com/slicer69/sysvinit/releases/download/3.14/sysvinit-3.14.tar.xz,241536,Descargado
+sysvinit-3.14.tar.xz,Fuente,https://github.com/slicer69/sysvinit/releases/download/3.14/sysvinit-3.14.tar.xz,241536,Descargado; MD5 oficial coincidente
 tar-1.35.tar.xz,Fuente,https://ftpmirror.gnu.org/tar/tar-1.35.tar.xz,2317208,Descargado
 tcl8.6.18-src.tar.gz,Fuente,https://downloads.sourceforge.net/tcl/tcl8.6.18-src.tar.gz,11816279,Descargado
 tcl8.6.18-html.tar.gz,Fuente,https://downloads.sourceforge.net/tcl/tcl8.6.18-html.tar.gz,1197786,Descargado
 texinfo-7.3.tar.xz,Fuente,https://ftpmirror.gnu.org/texinfo/texinfo-7.3.tar.xz,6940392,Descargado
 tzdata2026c.tar.gz,Fuente,https://www.iana.org/time-zones/repository/releases/tzdata2026c.tar.gz,475694,Descargado
-udev-lfs-20230818.tar.xz,Fuente,https://anduin.linuxfromscratch.org/LFS/udev-lfs-20230818.tar.xz,10180,Descargado
+udev-lfs-20230818.tar.xz,Fuente,https://anduin.linuxfromscratch.org/LFS/udev-lfs-20230818.tar.xz,10180,Descargado; MD5 coincidente con referencia histórica; pendiente justificar inclusión
 util-linux-2.42.2.tar.xz,Fuente,https://www.kernel.org/pub/linux/utils/util-linux/v2.42/util-linux-2.42.2.tar.xz,10658220,Descargado
 vim-9.2.1025.tar.gz,Fuente,https://github.com/vim/vim/archive/v9.2.1025/vim-9.2.1025.tar.gz,20133511,Descargado
 wheel-0.48.0.tar.gz,Fuente,https://pypi.org/packages/source/w/wheel/wheel-0.48.0.tar.gz,66471,Descargado
@@ -96,5 +96,5 @@ glibc-2.44-upstream_fixes-1.patch,Parche,https://www.linuxfromscratch.org/patche
 glibc-fhs-1.patch,Parche,https://www.linuxfromscratch.org/patches/lfs/13.1/glibc-fhs-1.patch,2804,Descargado
 kbd-2.10.0-backspace-1.patch,Parche,https://www.linuxfromscratch.org/patches/lfs/13.1/kbd-2.10.0-backspace-1.patch,12640,Descargado
 Python-3.14.7-openssl_4-1.patch,Parche,https://www.linuxfromscratch.org/patches/lfs/13.1/Python-3.14.7-openssl_4-1.patch,38486,Descargado
-sysvinit-3.14-consolidated-1.patch,Parche,https://www.linuxfromscratch.org/patches/lfs/13.1/sysvinit-3.14-consolidated-1.patch,2644,Descargado
+sysvinit-3.14-consolidated-1.patch,Parche,https://www.linuxfromscratch.org/patches/lfs/13.1/sysvinit-3.14-consolidated-1.patch,2644,Descargado; idéntico al parche oficial
 tar-1.35-acl_fix-1.patch,Parche,https://www.linuxfromscratch.org/patches/lfs/13.1/tar-1.35-acl_fix-1.patch,4333,Descargado
