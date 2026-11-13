@@ -3,6 +3,18 @@
 set -u
 export LC_ALL=C
 
+# Guardar automaticamente cada ejecucion como evidencia.
+if [[ "${LFS_HOST_CHECK_LOGGED:-0}" != "1" ]]; then
+    SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+    REPO_ROOT="$(dirname "$SCRIPT_DIR")"
+    LOG_FILE="$REPO_ROOT/docs/lfs/host-check-ejecucion.txt"
+
+    mkdir -p "$REPO_ROOT/docs/lfs"
+    (cd "$REPO_ROOT" && LFS_HOST_CHECK_LOGGED=1 bash "$SCRIPT_DIR/lfs-host-check.sh" "$@") 2>&1 | tee "$LOG_FILE"
+    RESULT=${PIPESTATUS[0]}
+    exit "$RESULT"
+fi
+
 ERRORS=0
 WARNINGS=0
 
@@ -147,9 +159,28 @@ fi
 rm -f "$TMP_SOURCE" "$TMP_BINARY"
 
 echo
+echo "===== PRUEBA DE COMPILACION DE 32 BITS ====="
+
+TMP_DIR=$(mktemp -d)
+printf 'void kernel_test(void) {}\n' > "$TMP_DIR/test.c"
+
+if gcc -m32 -ffreestanding -fno-pie -c "$TMP_DIR/test.c" -o "$TMP_DIR/test.o"; then
+    ok "GCC genera correctamente un objeto ELF de 32 bits"
+    file "$TMP_DIR/test.o"
+else
+    error "GCC no pudo generar un objeto de 32 bits"
+fi
+
+rm -rf "$TMP_DIR"
+
+echo
 echo "===== RECURSOS DEL ANFITRION ====="
 echo "Procesadores: $(nproc)"
 free -h
+
+echo
+echo "===== ESPACIO DISPONIBLE EN DISCO ====="
+df -h "$HOME"
 
 if [ "$(nproc)" -lt 4 ]; then
     warning "Menos de 4 nucleos: la compilacion puede tardar mas"

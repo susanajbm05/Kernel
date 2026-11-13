@@ -10,7 +10,7 @@ Linux From Scratch (LFS) 13.1-systemd como referencia.
 
 - Sistema operativo: Ubuntu 26.04.1 LTS.
 - Arquitectura: x86_64.
-- Kernel: 7.0.0-34-generic.
+- Kernel: 7.0.0-38-generic.
 - Procesadores disponibles: 3.
 - Memoria RAM: 5.3 GiB.
 - Memoria Swap: 3.8 GiB.
@@ -31,6 +31,12 @@ por LFS 13.1.
 
 También se realizó una prueba de compilación con G++,
 que finalizó correctamente.
+
+Se incorporó una prueba adicional de compilación de 32 bits
+con GCC, que generó correctamente un objeto ELF para Intel i386.
+
+Se comprobó el espacio disponible en la partición del sistema:
+40 GB de capacidad total, 13 GB utilizados y 25 GB disponibles.
 
 ## 4. Comprobaciones adicionales
 
@@ -65,6 +71,7 @@ no errores de las comprobaciones ejecutadas.
 - host-aux-tools.txt
 - host-links-pty.txt
 - host-final-check.txt
+- host-check-ejecucion.txt (registro generado automáticamente por el script)
 - version-check.sh
 - version-check-result.txt
 - scripts/lfs-host-check.sh
@@ -81,6 +88,15 @@ observaciones relacionadas con los recursos disponibles.
 El comprobador de versiones de LFS 13.1-systemd también
 finalizó satisfactoriamente. Todas las herramientas evaluadas
 cumplieron las versiones mínimas establecidas.
+
+El script scripts/lfs-host-check.sh se ejecutó nuevamente
+y generó automáticamente docs/lfs/host-check-ejecucion.txt.
+La ejecución registró cero errores y dos observaciones
+relacionadas con los recursos de la máquina virtual.
+
+También quedaron registradas las pruebas satisfactorias
+de compilación C++ y de generación de objetos de 32 bits,
+así como la disponibilidad de espacio en disco.
 
 Las evidencias de ambas comprobaciones quedaron registradas
 en los archivos correspondientes dentro del repositorio.
