@@ -73,6 +73,22 @@ Resultados:
 
 Estas verificaciones complementarias no se contabilizan dentro de las 94 verificaciones del manifiesto oficial. Tampoco se agregaron sumas inventadas al archivo md5sums.
 
+## 7. Verificación automatizada
+
+Se desarrolló el script scripts/lfs-source-check.sh para automatizar las comprobaciones de KRN-005. El script permite repetir la revisión de los recursos descargados sin modificar las fuentes ni los manifiestos.
+
+El script comprueba:
+
+- Existencia de los documentos wget-list, md5sums e inventario-fuentes.csv.
+- Disponibilidad de los 99 archivos registrados en wget-list.
+- Coincidencia de las 94 sumas MD5 oficiales.
+- Coincidencia de las cinco sumas MD5 complementarias documentadas.
+- Integridad de cuatro archivos comprimidos mediante gzip -t y xz -t.
+- Legibilidad del parche complementario mediante git apply --stat, sin aplicarlo.
+- Correspondencia de los tamaños registrados en el inventario.
+
+Resultado de la ejecución: 212 verificaciones correctas, 0 errores y 0 avisos. La salida completa se conserva en verificacion-script.txt.
+
 ## 7. Evidencias conservadas
 
 La carpeta docs/lfs/krn-005/ contiene:

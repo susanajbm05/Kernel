@@ -1,0 +1,239 @@
+==========================================
+ KRN-005 - Verificacion de fuentes LFS
+==========================================
+Repositorio: /home/julia-barahona/kernel
+Fuentes:     /home/julia-barahona/lfs-sources
+
+[OK] Documento encontrado: wget-list
+[OK] Documento encontrado: md5sums
+[OK] Documento encontrado: inventario-fuentes.csv
+
+--- Archivos registrados en wget-list ---
+[OK] Archivo disponible: acl-2.4.0.tar.xz
+[OK] Archivo disponible: attr-2.6.0.tar.gz
+[OK] Archivo disponible: autoconf-2.73.tar.xz
+[OK] Archivo disponible: automake-1.18.1.tar.xz
+[OK] Archivo disponible: bash-5.3.tar.gz
+[OK] Archivo disponible: bc-7.0.3.tar.xz
+[OK] Archivo disponible: binutils-2.47.tar.xz
+[OK] Archivo disponible: bison-3.8.2.tar.xz
+[OK] Archivo disponible: bzip2-1.0.8.tar.gz
+[OK] Archivo disponible: coreutils-9.11.tar.xz
+[OK] Archivo disponible: dbus-1.16.2.tar.xz
+[OK] Archivo disponible: dejagnu-1.6.3.tar.gz
+[OK] Archivo disponible: diffutils-3.12.tar.xz
+[OK] Archivo disponible: e2fsprogs-1.47.4.tar.gz
+[OK] Archivo disponible: elfutils-0.195.tar.bz2
+[OK] Archivo disponible: expat-2.8.3.tar.xz
+[OK] Archivo disponible: expect5.45.4.tar.gz
+[OK] Archivo disponible: file-5.48.tar.gz
+[OK] Archivo disponible: findutils-4.11.0.tar.xz
+[OK] Archivo disponible: flex-2.6.4.tar.gz
+[OK] Archivo disponible: flit_core-4.0.2.tar.gz
+[OK] Archivo disponible: gawk-5.4.1.tar.xz
+[OK] Archivo disponible: gcc-16.2.0.tar.xz
+[OK] Archivo disponible: gdbm-1.26.tar.gz
+[OK] Archivo disponible: gettext-1.0.tar.xz
+[OK] Archivo disponible: glibc-2.44.tar.xz
+[OK] Archivo disponible: gmp-6.3.0.tar.xz
+[OK] Archivo disponible: gperf-3.3.tar.gz
+[OK] Archivo disponible: grep-3.12.tar.xz
+[OK] Archivo disponible: groff-1.24.1.tar.gz
+[OK] Archivo disponible: grub-2.14.tar.xz
+[OK] Archivo disponible: gzip-1.14.tar.xz
+[OK] Archivo disponible: iana-etc-20260805.tar.gz
+[OK] Archivo disponible: inetutils-2.8.tar.gz
+[OK] Archivo disponible: iproute2-7.1.0.tar.xz
+[OK] Archivo disponible: jinja2-3.1.6.tar.gz
+[OK] Archivo disponible: kbd-2.10.0.tar.xz
+[OK] Archivo disponible: kmod-34.2.tar.xz
+[OK] Archivo disponible: less-704.tar.gz
+[OK] Archivo disponible: lfs-bootscripts-20250827.tar.xz
+[OK] Archivo disponible: libcap-2.78.tar.xz
+[OK] Archivo disponible: libffi-3.8.0.tar.gz
+[OK] Archivo disponible: libpipeline-1.5.8.tar.gz
+[OK] Archivo disponible: libtool-2.6.2.tar.xz
+[OK] Archivo disponible: libxcrypt-4.5.2.tar.xz
+[OK] Archivo disponible: linux-7.1.8.tar.xz
+[OK] Archivo disponible: lz4-1.10.0.tar.gz
+[OK] Archivo disponible: m4-1.4.21.tar.xz
+[OK] Archivo disponible: make-4.4.1.tar.gz
+[OK] Archivo disponible: man-db-2.13.1.tar.xz
+[OK] Archivo disponible: man-pages-6.18.tar.xz
+[OK] Archivo disponible: markupsafe-3.0.3.tar.gz
+[OK] Archivo disponible: meson-1.12.0.tar.gz
+[OK] Archivo disponible: mpc-1.4.1.tar.xz
+[OK] Archivo disponible: mpdecimal-4.0.1.tar.gz
+[OK] Archivo disponible: mpfr-4.2.2.tar.xz
+[OK] Archivo disponible: ncurses-6.6.tar.gz
+[OK] Archivo disponible: ninja-1.13.2.tar.gz
+[OK] Archivo disponible: openssl-4.0.1.tar.gz
+[OK] Archivo disponible: packaging-26.3.tar.gz
+[OK] Archivo disponible: patch-2.8.tar.xz
+[OK] Archivo disponible: pcre2-10.47.tar.bz2
+[OK] Archivo disponible: perl-5.44.0.tar.xz
+[OK] Archivo disponible: pkgconf-3.0.5.tar.xz
+[OK] Archivo disponible: procps-ng-4.0.7.tar.xz
+[OK] Archivo disponible: psmisc-23.7.tar.xz
+[OK] Archivo disponible: Python-3.14.7.tar.xz
+[OK] Archivo disponible: python-3.14.7-docs-html.tar.bz2
+[OK] Archivo disponible: readline-8.3.tar.gz
+[OK] Archivo disponible: sed-4.10.tar.xz
+[OK] Archivo disponible: setuptools-84.0.0.tar.gz
+[OK] Archivo disponible: shadow-4.20.2.tar.xz
+[OK] Archivo disponible: sqlite-autoconf-3530400.tar.gz
+[OK] Archivo disponible: sqlite-doc-3530400.zip
+[OK] Archivo disponible: sysklogd-2.7.2.tar.gz
+[OK] Archivo disponible: systemd-261.2.tar.gz
+[OK] Archivo disponible: systemd-man-pages-261.2.tar.xz
+[OK] Archivo disponible: sysvinit-3.14.tar.xz
+[OK] Archivo disponible: tar-1.35.tar.xz
+[OK] Archivo disponible: tcl8.6.18-src.tar.gz
+[OK] Archivo disponible: tcl8.6.18-html.tar.gz
+[OK] Archivo disponible: texinfo-7.3.tar.xz
+[OK] Archivo disponible: tzdata2026c.tar.gz
+[OK] Archivo disponible: udev-lfs-20230818.tar.xz
+[OK] Archivo disponible: util-linux-2.42.2.tar.xz
+[OK] Archivo disponible: vim-9.2.1025.tar.gz
+[OK] Archivo disponible: wheel-0.48.0.tar.gz
+[OK] Archivo disponible: xz-5.8.3.tar.xz
+[OK] Archivo disponible: zlib-1.3.2.tar.gz
+[OK] Archivo disponible: zstd-1.5.7.tar.gz
+[OK] Archivo disponible: bzip2-1.0.8-install_docs-1.patch
+[OK] Archivo disponible: coreutils-9.11-i18n-1.patch
+[OK] Archivo disponible: expect-5.45.4-gcc15-1.patch
+[OK] Archivo disponible: glibc-2.44-upstream_fixes-1.patch
+[OK] Archivo disponible: glibc-fhs-1.patch
+[OK] Archivo disponible: kbd-2.10.0-backspace-1.patch
+[OK] Archivo disponible: Python-3.14.7-openssl_4-1.patch
+[OK] Archivo disponible: sysvinit-3.14-consolidated-1.patch
+[OK] Archivo disponible: tar-1.35-acl_fix-1.patch
+
+--- MD5 oficiales ---
+[OK] MD5 oficiales correctos: 94
+
+--- MD5 complementarios ---
+[OK] MD5 complementario correcto: lfs-bootscripts-20250827.tar.xz
+[OK] MD5 complementario correcto: sysklogd-2.7.2.tar.gz
+[OK] MD5 complementario correcto: sysvinit-3.14-consolidated-1.patch
+[OK] MD5 complementario correcto: sysvinit-3.14.tar.xz
+[OK] MD5 complementario correcto: udev-lfs-20230818.tar.xz
+
+--- Integridad de archivos comprimidos ---
+[OK] Archivo comprimido valido: lfs-bootscripts-20250827.tar.xz
+[OK] Archivo comprimido valido: sysklogd-2.7.2.tar.gz
+[OK] Archivo comprimido valido: sysvinit-3.14.tar.xz
+[OK] Archivo comprimido valido: udev-lfs-20230818.tar.xz
+
+--- Parche complementario ---
+[OK] Parche legible y reconocido por git apply
+
+--- Comparacion de tamanos del inventario ---
+[OK] Tamano correcto: acl-2.4.0.tar.xz
+[OK] Tamano correcto: attr-2.6.0.tar.gz
+[OK] Tamano correcto: autoconf-2.73.tar.xz
+[OK] Tamano correcto: automake-1.18.1.tar.xz
+[OK] Tamano correcto: bash-5.3.tar.gz
+[OK] Tamano correcto: bc-7.0.3.tar.xz
+[OK] Tamano correcto: binutils-2.47.tar.xz
+[OK] Tamano correcto: bison-3.8.2.tar.xz
+[OK] Tamano correcto: bzip2-1.0.8.tar.gz
+[OK] Tamano correcto: coreutils-9.11.tar.xz
+[OK] Tamano correcto: dbus-1.16.2.tar.xz
+[OK] Tamano correcto: dejagnu-1.6.3.tar.gz
+[OK] Tamano correcto: diffutils-3.12.tar.xz
+[OK] Tamano correcto: e2fsprogs-1.47.4.tar.gz
+[OK] Tamano correcto: elfutils-0.195.tar.bz2
+[OK] Tamano correcto: expat-2.8.3.tar.xz
+[OK] Tamano correcto: expect5.45.4.tar.gz
+[OK] Tamano correcto: file-5.48.tar.gz
+[OK] Tamano correcto: findutils-4.11.0.tar.xz
+[OK] Tamano correcto: flex-2.6.4.tar.gz
+[OK] Tamano correcto: flit_core-4.0.2.tar.gz
+[OK] Tamano correcto: gawk-5.4.1.tar.xz
+[OK] Tamano correcto: gcc-16.2.0.tar.xz
+[OK] Tamano correcto: gdbm-1.26.tar.gz
+[OK] Tamano correcto: gettext-1.0.tar.xz
+[OK] Tamano correcto: glibc-2.44.tar.xz
+[OK] Tamano correcto: gmp-6.3.0.tar.xz
+[OK] Tamano correcto: gperf-3.3.tar.gz
+[OK] Tamano correcto: grep-3.12.tar.xz
+[OK] Tamano correcto: groff-1.24.1.tar.gz
+[OK] Tamano correcto: grub-2.14.tar.xz
+[OK] Tamano correcto: gzip-1.14.tar.xz
+[OK] Tamano correcto: iana-etc-20260805.tar.gz
+[OK] Tamano correcto: inetutils-2.8.tar.gz
+[OK] Tamano correcto: iproute2-7.1.0.tar.xz
+[OK] Tamano correcto: jinja2-3.1.6.tar.gz
+[OK] Tamano correcto: kbd-2.10.0.tar.xz
+[OK] Tamano correcto: kmod-34.2.tar.xz
+[OK] Tamano correcto: less-704.tar.gz
+[OK] Tamano correcto: lfs-bootscripts-20250827.tar.xz
+[OK] Tamano correcto: libcap-2.78.tar.xz
+[OK] Tamano correcto: libffi-3.8.0.tar.gz
+[OK] Tamano correcto: libpipeline-1.5.8.tar.gz
+[OK] Tamano correcto: libtool-2.6.2.tar.xz
+[OK] Tamano correcto: libxcrypt-4.5.2.tar.xz
+[OK] Tamano correcto: linux-7.1.8.tar.xz
+[OK] Tamano correcto: lz4-1.10.0.tar.gz
+[OK] Tamano correcto: m4-1.4.21.tar.xz
+[OK] Tamano correcto: make-4.4.1.tar.gz
+[OK] Tamano correcto: man-db-2.13.1.tar.xz
+[OK] Tamano correcto: man-pages-6.18.tar.xz
+[OK] Tamano correcto: markupsafe-3.0.3.tar.gz
+[OK] Tamano correcto: meson-1.12.0.tar.gz
+[OK] Tamano correcto: mpc-1.4.1.tar.xz
+[OK] Tamano correcto: mpdecimal-4.0.1.tar.gz
+[OK] Tamano correcto: mpfr-4.2.2.tar.xz
+[OK] Tamano correcto: ncurses-6.6.tar.gz
+[OK] Tamano correcto: ninja-1.13.2.tar.gz
+[OK] Tamano correcto: openssl-4.0.1.tar.gz
+[OK] Tamano correcto: packaging-26.3.tar.gz
+[OK] Tamano correcto: patch-2.8.tar.xz
+[OK] Tamano correcto: pcre2-10.47.tar.bz2
+[OK] Tamano correcto: perl-5.44.0.tar.xz
+[OK] Tamano correcto: pkgconf-3.0.5.tar.xz
+[OK] Tamano correcto: procps-ng-4.0.7.tar.xz
+[OK] Tamano correcto: psmisc-23.7.tar.xz
+[OK] Tamano correcto: Python-3.14.7.tar.xz
+[OK] Tamano correcto: python-3.14.7-docs-html.tar.bz2
+[OK] Tamano correcto: readline-8.3.tar.gz
+[OK] Tamano correcto: sed-4.10.tar.xz
+[OK] Tamano correcto: setuptools-84.0.0.tar.gz
+[OK] Tamano correcto: shadow-4.20.2.tar.xz
+[OK] Tamano correcto: sqlite-autoconf-3530400.tar.gz
+[OK] Tamano correcto: sqlite-doc-3530400.zip
+[OK] Tamano correcto: sysklogd-2.7.2.tar.gz
+[OK] Tamano correcto: systemd-261.2.tar.gz
+[OK] Tamano correcto: systemd-man-pages-261.2.tar.xz
+[OK] Tamano correcto: sysvinit-3.14.tar.xz
+[OK] Tamano correcto: tar-1.35.tar.xz
+[OK] Tamano correcto: tcl8.6.18-src.tar.gz
+[OK] Tamano correcto: tcl8.6.18-html.tar.gz
+[OK] Tamano correcto: texinfo-7.3.tar.xz
+[OK] Tamano correcto: tzdata2026c.tar.gz
+[OK] Tamano correcto: udev-lfs-20230818.tar.xz
+[OK] Tamano correcto: util-linux-2.42.2.tar.xz
+[OK] Tamano correcto: vim-9.2.1025.tar.gz
+[OK] Tamano correcto: wheel-0.48.0.tar.gz
+[OK] Tamano correcto: xz-5.8.3.tar.xz
+[OK] Tamano correcto: zlib-1.3.2.tar.gz
+[OK] Tamano correcto: zstd-1.5.7.tar.gz
+[OK] Tamano correcto: bzip2-1.0.8-install_docs-1.patch
+[OK] Tamano correcto: coreutils-9.11-i18n-1.patch
+[OK] Tamano correcto: expect-5.45.4-gcc15-1.patch
+[OK] Tamano correcto: glibc-2.44-upstream_fixes-1.patch
+[OK] Tamano correcto: glibc-fhs-1.patch
+[OK] Tamano correcto: kbd-2.10.0-backspace-1.patch
+[OK] Tamano correcto: Python-3.14.7-openssl_4-1.patch
+[OK] Tamano correcto: sysvinit-3.14-consolidated-1.patch
+[OK] Tamano correcto: tar-1.35-acl_fix-1.patch
+
+==========================================
+ RESUMEN DE VERIFICACION
+==========================================
+Verificaciones correctas: 212
+Errores:                  0
+Avisos:                   0
+==========================================
+RESULTADO: VERIFICACION COMPLETADA
