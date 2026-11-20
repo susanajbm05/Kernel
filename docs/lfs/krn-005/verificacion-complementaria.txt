@@ -31,7 +31,7 @@ que no tienen una entrada propia en el archivo md5sums de stable-systemd.
    MD5 local: acd4360d8a5c3ef320b9db88d275dae6
    Resultado: coincide con una referencia histórica consultada.
    Integridad del archivo comprimido: xz -t sin errores.
-   Pendiente: justificar su inclusión en el conjunto de LFS 13.1-systemd.
+   Justificación: el archivo figura en el wget-list oficial de LFS 13.1-systemd. No figura en md5sums, por lo que su MD5 se documenta como verificación complementaria.
 
 IMPORTANTE:
 - Estas verificaciones complementan, pero no modifican, md5sums.

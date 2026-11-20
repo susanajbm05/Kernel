@@ -82,7 +82,7 @@ tcl8.6.18-src.tar.gz,Fuente,https://downloads.sourceforge.net/tcl/tcl8.6.18-src.
 tcl8.6.18-html.tar.gz,Fuente,https://downloads.sourceforge.net/tcl/tcl8.6.18-html.tar.gz,1197786,Descargado
 texinfo-7.3.tar.xz,Fuente,https://ftpmirror.gnu.org/texinfo/texinfo-7.3.tar.xz,6940392,Descargado
 tzdata2026c.tar.gz,Fuente,https://www.iana.org/time-zones/repository/releases/tzdata2026c.tar.gz,475694,Descargado
-udev-lfs-20230818.tar.xz,Fuente,https://anduin.linuxfromscratch.org/LFS/udev-lfs-20230818.tar.xz,10180,Descargado; MD5 coincidente con referencia histórica; pendiente justificar inclusión
+udev-lfs-20230818.tar.xz,Fuente,https://anduin.linuxfromscratch.org/LFS/udev-lfs-20230818.tar.xz,10180,Descargado; incluido en wget-list oficial de LFS 13.1-systemd; MD5 verificado complementariamente
 util-linux-2.42.2.tar.xz,Fuente,https://www.kernel.org/pub/linux/utils/util-linux/v2.42/util-linux-2.42.2.tar.xz,10658220,Descargado
 vim-9.2.1025.tar.gz,Fuente,https://github.com/vim/vim/archive/v9.2.1025/vim-9.2.1025.tar.gz,20133511,Descargado
 wheel-0.48.0.tar.gz,Fuente,https://pypi.org/packages/source/w/wheel/wheel-0.48.0.tar.gz,66471,Descargado

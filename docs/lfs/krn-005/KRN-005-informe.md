@@ -69,9 +69,25 @@ Resultados:
 - sysklogd-2.7.2.tar.gz: MD5 comparado con la referencia oficial consultada y prueba gzip -t sin errores.
 - sysvinit-3.14-consolidated-1.patch: archivo idéntico al parche descargado desde el repositorio oficial de parches LFS.
 - sysvinit-3.14.tar.xz: MD5 comparado con la referencia oficial consultada y prueba xz -t sin errores.
-- udev-lfs-20230818.tar.xz: MD5 comparado con una referencia histórica y prueba xz -t sin errores. Su inclusión en el conjunto específico de LFS 13.1-systemd continúa pendiente de justificación.
+- udev-lfs-20230818.tar.xz: MD5 comparado con una referencia histórica y prueba xz -t sin errores. Su inclusión en el conjunto de LFS 13.1-systemd está respaldada por su presencia en el wget-list oficial.
 
 Estas verificaciones complementarias no se contabilizan dentro de las 94 verificaciones del manifiesto oficial. Tampoco se agregaron sumas inventadas al archivo md5sums.
+
+## 7. Verificación automatizada
+
+Se desarrolló el script scripts/lfs-source-check.sh para automatizar las comprobaciones de KRN-005. El script permite repetir la revisión de los recursos descargados sin modificar las fuentes ni los manifiestos.
+
+El script comprueba:
+
+- Existencia de los documentos wget-list, md5sums e inventario-fuentes.csv.
+- Disponibilidad de los 99 archivos registrados en wget-list.
+- Coincidencia de las 94 sumas MD5 oficiales.
+- Coincidencia de las cinco sumas MD5 complementarias documentadas.
+- Integridad de cuatro archivos comprimidos mediante gzip -t y xz -t.
+- Legibilidad del parche complementario mediante git apply --stat, sin aplicarlo.
+- Correspondencia de los tamaños registrados en el inventario.
+
+Resultado de la ejecución: 212 verificaciones correctas, 0 errores y 0 avisos. La salida completa se conserva en verificacion-script.txt.
 
 ## 7. Evidencias conservadas
 
@@ -90,6 +106,6 @@ Las fuentes descargadas se mantienen en ~/lfs-sources y no se incorporan directa
 
 Se completó la descarga de los 99 recursos registrados en wget-list. De los archivos incluidos en el manifiesto oficial MD5, los 94 obtuvieron resultados correctos y no se registraron fallos.
 
-También se identificaron cinco recursos sin suma correspondiente en el manifiesto y se documentaron sus verificaciones complementarias por separado. Se mantiene pendiente justificar la inclusión de udev-lfs-20230818.tar.xz en el conjunto específico de LFS 13.1-systemd.
+También se identificaron cinco recursos sin suma correspondiente en el manifiesto y se documentaron sus verificaciones complementarias por separado. La inclusión de udev-lfs-20230818.tar.xz está justificada por su presencia en el wget-list oficial de LFS 13.1-systemd.
 
-El trabajo conserva evidencia de las referencias utilizadas, los resultados de integridad y las observaciones pendientes para facilitar la revisión y validación de KRN-005.
+El trabajo conserva evidencia de las referencias utilizadas, los resultados de integridad y las observaciones y verificaciones realizadas para facilitar la revisión y validación de KRN-005.
