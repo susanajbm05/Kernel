@@ -237,19 +237,28 @@ Al finalizar:
 
 ## 13. Evidencias de la corrección
 
-Conservar los registros:
+Se conservaron los registros de recompilación e instalación de GCC Pass 2:
 
 - `/home/lfs/gcc-pass2-recompilacion.log`
 - `/home/lfs/gcc-pass2-instalacion.log`
 
-Registrar también:
+Los archivos fueron localizados y revisados. Ambos procesos llegaron al final de sus registros y no se encontraron coincidencias con los siguientes patrones de error:
 
-- Versión de GCC y G++.
-- Target de compilación.
-- Configuración final de GCC.
-- Bibliotecas instaladas.
-- Resultado de compilación C y C++.
-- Identificación ELF de los archivos objeto.
+- `fatal error`
+- `undefined reference`
+- Errores de ejecución de `make` (`make: ***`)
+
+También se verificaron los siguientes resultados:
+
+- GCC y G++ versión 16.2.0.
+- Target de compilación: `x86_64-lfs-linux-gnu`.
+- Configuración final: `--prefix=/usr`.
+- Lenguajes habilitados: `--enable-languages=c,c++`.
+- Bibliotecas `libgcc_s` y `libstdc++` disponibles en `/mnt/lfs/usr/lib`.
+- Compilación C y C++ con código de salida 0.
+- Archivos objeto identificados como ELF de 64 bits para x86-64.
+
+Los registros originales se conservaron en `/home/lfs` como evidencia del procedimiento realizado.
 
 ## 14. Resultados obtenidos en la máquina de referencia
 

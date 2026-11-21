@@ -1,4 +1,3 @@
-
 # ONYX OS - KRN-007
 ## Toolchain cruzada y herramientas temporales
 
@@ -13,7 +12,7 @@
 
 ## 1. Objetivo
 
-Documentar la configuración del entorno LFS, la toolchain cruzada, las herramientas temporales y los procedimientos de validación correspondientes a KRN-007.
+Documentar la configuración del entorno LFS, la toolchain cruzada, las herramientas temporales, la corrección de GCC Pass 2 y los procedimientos de validación correspondientes a KRN-007.
 
 ## 2. Entorno de compilación
 
@@ -27,22 +26,30 @@ export PATH=/tools/bin:/usr/bin
 
 El directorio `/tools` es un enlace simbólico a `/mnt/lfs/tools`.
 
+La partición LFS debe estar montada en `/mnt/lfs` antes de realizar las operaciones correspondientes.
+
 ## 3. Toolchain cruzada
 
-Se verificaron los siguientes compiladores:
+Se verificaron los siguientes ejecutables:
 
 - `x86_64-lfs-linux-gnu-gcc`
 - `x86_64-lfs-linux-gnu-g++`
+- `x86_64-lfs-linux-gnu-ld`
+- `x86_64-lfs-linux-gnu-as`
 
-Versión identificada: GCC 16.2.0.
-
-Target confirmado:
+Se confirmó el target:
 
 `x86_64-lfs-linux-gnu`
 
+Versión de GCC y G++:
+
+`16.2.0`
+
+Los ejecutables de la toolchain cruzada se encuentran en `/tools/bin`.
+
 ## 4. Herramientas temporales
 
-Se localizaron ejecutables correspondientes a:
+Se comprobó la disponibilidad de los 15 componentes siguientes:
 
 1. M4
 2. Ncurses
@@ -60,69 +67,135 @@ Se localizaron ejecutables correspondientes a:
 14. Tar
 15. Xz
 
-También se identificaron componentes de Binutils y GCC en `/tools/bin`.
+También se verificaron los componentes correspondientes a:
 
-La presencia de los ejecutables fue comprobada mediante `scripts/validacion_krn007.sh`. La comprobación de presencia no sustituye la validación individual de versiones y compilaciones de todos los paquetes.
+16. Binutils Pass 2
+17. GCC Pass 2
+
+Las versiones confirmadas individualmente son:
+
+| Componente | Versión |
+|---|---|
+| Ncurses | 6.5.20240427 |
+| Patch | 2.7.6 |
+| Sed | 4.9 |
+| Xz | 5.8.1 |
+| GCC / G++ | 16.2.0 |
+
+La disponibilidad de los ejecutables se comprobó mediante `scripts/validacion_krn007.sh`.
+
+La comprobación de presencia no sustituye las pruebas individuales de compilación y funcionamiento de cada paquete.
+
+Para consultar la versión de Ncurses se utilizó:
+
+```bash
+sudo chroot /mnt/lfs /usr/bin/tic -V
+```
+
+Esta prueba se realiza dentro del entorno LFS para evitar conflictos entre las bibliotecas del sistema anfitrión y las del sistema LFS.
 
 ## 5. Corrección de GCC Pass 2
 
-Se identificó un error tipográfico en la configuración de GCC Pass 2:
+Durante la configuración de GCC Pass 2 se identificó un error tipográfico:
 
 Opción incorrecta:
 
 `--enable-lenguages=c,c++`
 
-Opción corregida:
+Opción correcta:
 
 `--enable-languages=c,c++`
 
-Archivo corregido:
+También se corrigió la configuración para utilizar:
 
-`/mnt/lfs/sources/gcc-16.2.0/build-pass2/config.status`
+`--prefix=/usr`
 
-Comando utilizado:
+La instalación se realizó utilizando `DESTDIR=/mnt/lfs`, evitando la creación de una ruta de instalación duplicada.
 
-```bash
-sudo sed -i 's/--enable-lenguages/--enable-languages/g' config.status
-```
+Los ejecutables finales se encuentran en:
 
-Se comprobó que no quedaran apariciones de la opción incorrecta.
+- `/mnt/lfs/usr/bin/gcc`
+- `/mnt/lfs/usr/bin/g++`
 
-## 6. Prueba de compilación
+El procedimiento detallado se encuentra en:
 
-Se realizaron pruebas de compilación C y C++ utilizando los ejecutables de:
+`docs/KRN-007_CORRECCION_GCC_PASS2.md`
 
-`/mnt/lfs/mnt/lfs/usr/bin/`
+## 6. Validación de GCC Pass 2
 
-Resultados:
+Se verificaron las versiones:
+
+- GCC: 16.2.0
+- G++: 16.2.0
+
+Target:
+
+`x86_64-lfs-linux-gnu`
+
+También se comprobó la presencia de las bibliotecas:
+
+- `libgcc_s.so.1`
+- `libstdc++.so.6`
+- `libstdc++.so.6.0.36`
+
+Ubicación:
+
+`/mnt/lfs/usr/lib`
+
+Se realizaron pruebas de compilación C y C++:
 
 - Compilación C: código de salida 0.
 - Compilación C++: código de salida 0.
-- Archivos generados: objetos ELF de 64 bits para x86-64.
+- Objetos generados: ELF de 64 bits para x86-64.
 
-## 7. Inconsistencia pendiente
+## 7. Registros de compilación e instalación
 
-Se detectó que GCC y G++ están disponibles en:
+Se conservaron los registros:
 
-`/mnt/lfs/mnt/lfs/usr/bin/`
+- `/home/lfs/gcc-pass2-recompilacion.log`
+- `/home/lfs/gcc-pass2-instalacion.log`
 
-Pero no aparecen en la ubicación esperada:
+Se revisó el final de ambos registros y se buscaron patrones de errores fatales, referencias indefinidas y fallos de `make`. No se encontraron coincidencias.
 
-`/mnt/lfs/usr/bin/`
-
-Por tanto, queda pendiente completar la recompilación de GCC Pass 2 y repetir las validaciones en la ruta esperada.
+Estos archivos constituyen evidencia del procedimiento realizado.
 
 ## 8. Scripts del proyecto
 
-- `scripts/instalacion_krn007.sh`: configuración y comprobaciones iniciales del entorno; pendiente completar el procedimiento de instalación.
-- `scripts/validacion_krn007.sh`: comprobación de toolchain, herramientas y bibliotecas.
+### `scripts/instalacion_krn007.sh`
 
-## 9. Alcance
+Prepara y realiza comprobaciones iniciales del entorno de compilación, verifica directorios y fuentes requeridos, configura variables y establece el contexto de trabajo.
 
-KRN-007 comprende el entorno LFS, la toolchain cruzada, las herramientas temporales y su documentación.
+**Importante:** el script actual no ejecuta la compilación ni la instalación automática de los paquetes. Su función es preparar y comprobar el entorno.
+
+### `scripts/validacion_krn007.sh`
+
+Comprueba:
+
+- Montaje y estructura del directorio LFS.
+- Disponibilidad de la toolchain cruzada.
+- Presencia de GCC y G++ Pass 2.
+- Disponibilidad de bibliotecas.
+- Presencia de las herramientas temporales y componentes de Binutils Pass 2.
+
+El script verifica rutas y disponibilidad de ejecutables; no sustituye las pruebas funcionales individuales de todos los paquetes.
+
+## 9. Alcance de KRN-007
+
+KRN-007 comprende:
+
+- Configuración del entorno LFS.
+- Construcción y verificación de la toolchain cruzada.
+- Herramientas temporales.
+- Binutils Pass 2.
+- GCC Pass 2.
+- Documentación y validaciones correspondientes.
 
 La preparación del Chroot y las herramientas adicionales de KRN-008 quedan fuera de este alcance.
 
-## 10. Estado
+## 10. Estado actual
 
-KRN-007 continúa en proceso hasta completar la instalación correcta de GCC Pass 2, las validaciones finales y las evidencias correspondientes.
+Se completaron las verificaciones documentadas de la toolchain cruzada, GCC Pass 2, las bibliotecas y la disponibilidad de los 17 componentes contemplados en esta tarea.
+
+Las pruebas de compilación C y C++ finalizaron correctamente y los registros de recompilación e instalación de GCC Pass 2 se conservaron como evidencia.
+
+Los scripts del proyecto permiten preparar y comprobar el entorno, aunque la instalación automatizada de los paquetes no está implementada en el script de preparación.
