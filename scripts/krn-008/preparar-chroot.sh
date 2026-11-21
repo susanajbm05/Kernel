@@ -16,8 +16,11 @@ limpiar_montajes() {
 
     for ((i=${#MONTADOS[@]}-1; i>=0; i--)); do
         if mountpoint -q "${MONTADOS[$i]}"; then
-            umount "${MONTADOS[$i]}" || true
-            echo "[DESMONTADO] ${MONTADOS[$i]}"
+            if umount "${MONTADOS[$i]}"; then
+                echo "[DESMONTADO] ${MONTADOS[$i]}"
+            else
+                echo "[ERROR] No se pudo desmontar ${MONTADOS[$i]}" >&2
+            fi
         fi
     done
 }
@@ -179,6 +182,10 @@ fi
 
 if [[ "$MODO" == "--chroot" ]]; then
     preparar_montajes
+
+    # Limpiar los montajes al salir del Chroot,
+    # tanto si termina correctamente como si falla.
+    trap limpiar_montajes EXIT
 
     echo "Entrando al entorno LFS."
     echo "Para salir del Chroot, escribe: exit"
