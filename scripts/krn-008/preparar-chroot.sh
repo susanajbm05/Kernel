@@ -104,8 +104,8 @@ comprobar_directorio "usr/bin"
 comprobar_directorio "usr/sbin"
 comprobar_directorio "usr/lib"
 
-if (( fallos > 0 )); then
-    error "Hay $fallos requisitos pendientes. No se preparará el Chroot."
+if ((fallos > 0)); then
+    error "Faltan $fallos requisitos. No se puede continuar."
 fi
 
 echo ""
@@ -183,8 +183,9 @@ fi
 if [[ "$MODO" == "--chroot" ]]; then
     preparar_montajes
 
-    # Limpiar los montajes al salir del Chroot,
-    # tanto si termina correctamente como si falla.
+    # Limpiar los montajes realizados por esta ejecución
+    # al salir del Chroot, tanto si termina correctamente
+    # como si ocurre un error.
     trap limpiar_montajes EXIT
 
     echo "Entrando al entorno LFS."
