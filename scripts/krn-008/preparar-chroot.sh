@@ -5,24 +5,78 @@ LFS="${LFS:-/mnt/lfs}"
 MODO="${1:---check}"
 
 MONTADOS=()
+ESTADO="/run/krn-008-montajes-$(printf '%s' "$LFS" | cksum | cut -d ' ' -f1).txt"
 
 error() {
     echo "[ERROR] $*" >&2
     exit 1
 }
 
+guardar_estado() {
+    local temporal="${ESTADO}.tmp"
+
+    if ((${#MONTADOS[@]})); then
+        printf '%s\n' "${MONTADOS[@]}" > "$temporal"
+    else
+        : > "$temporal"
+    fi
+
+    chmod 600 "$temporal"
+    mv "$temporal" "$ESTADO"
+}
+
+cargar_estado() {
+    local punto mount_id existente encontrado
+
+    [[ -f "$ESTADO" ]] || return 0
+
+    while IFS='|' read -r mount_id punto; do
+        [[ "$mount_id" =~ ^[0-9]+$ ]] || continue
+        [[ "$punto" == "$LFS/"* ]] || continue
+
+        # Recuperar solo rutas que todavía estén montadas.
+        # La limpieza comprobará si el ID sigue siendo el mismo.
+        mountpoint -q "$punto" || continue
+
+        encontrado=0
+        for existente in "${MONTADOS[@]}"; do
+            if [[ "$existente" == "$mount_id|$punto" ]]; then
+                encontrado=1
+                break
+            fi
+        done
+
+        if ((encontrado == 0)); then
+            MONTADOS+=("$mount_id|$punto")
+        fi
+    done < "$ESTADO"
+}
+
 limpiar_montajes() {
-    local i
+    local i mount_id punto actual
+    local fallo=0
 
     for ((i=${#MONTADOS[@]}-1; i>=0; i--)); do
-        if mountpoint -q "${MONTADOS[$i]}"; then
-            if umount "${MONTADOS[$i]}"; then
-                echo "[DESMONTADO] ${MONTADOS[$i]}"
+        IFS='|' read -r mount_id punto <<< "${MONTADOS[$i]}"
+
+        actual=$(findmnt -n -o ID --mountpoint "$punto" 2>/dev/null || true)
+
+        if [[ "$actual" == "$mount_id" ]]; then
+            if umount "$punto"; then
+                echo "[DESMONTADO] $punto"
             else
-                echo "[ERROR] No se pudo desmontar ${MONTADOS[$i]}" >&2
+                echo "[ERROR] No se pudo desmontar $punto" >&2
+                fallo=1
             fi
+        elif mountpoint -q "$punto"; then
+            echo "[OMITIDO] El montaje cambió en $punto; no se desmontará."
+            fallo=1
         fi
     done
+
+    if ((fallo == 0)); then
+        rm -f "$ESTADO" "${ESTADO}.tmp"
+    fi
 }
 
 manejar_error() {
@@ -131,20 +185,35 @@ if [[ ! -w "$LFS" ]]; then
     error "La raíz LFS no permite escritura."
 fi
 
+cargar_estado
+
 preparar_directorios() {
     mkdir -pv "$LFS"/{dev,proc,sys,run}
 }
 
 montar_si_necesario() {
     local destino="$1"
+    local mount_id
     shift
 
     if mountpoint -q "$destino"; then
         echo "[YA MONTADO] $destino"
     else
         "$@"
-        MONTADOS+=("$destino")
-        echo "[MONTADO] $destino"
+
+        mount_id=$(findmnt -n -o ID --mountpoint "$destino" 2>/dev/null) || {
+            umount "$destino" || true
+            error "No se pudo identificar el montaje: $destino"
+        }
+
+        if [[ ! "$mount_id" =~ ^[0-9]+$ ]]; then
+            umount "$destino" || true
+            error "ID de montaje inválido: $destino"
+        fi
+
+        MONTADOS+=("$mount_id|$destino")
+        guardar_estado
+        echo "[MONTADO] $destino (ID: $mount_id)"
     fi
 }
 
