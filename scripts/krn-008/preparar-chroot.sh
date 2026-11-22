@@ -190,7 +190,13 @@ limpiar_montajes() {
     done
 
     if ((fallo == 0)); then
-        rm -f "$ESTADO" "${ESTADO}.tmp"
+        if ! rm -f -- "$ESTADO" "${ESTADO}.tmp"; then
+            echo "[ERROR] No se pudieron eliminar los archivos de estado: $ESTADO y ${ESTADO}.tmp" >&2
+            fallo=1
+        fi
+    fi
+
+    if ((fallo == 0)); then
         echo "[OK] Limpieza de montajes completada."
         return 0
     fi
