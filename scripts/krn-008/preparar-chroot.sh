@@ -203,11 +203,13 @@ montar_si_necesario() {
 
         mount_id=$(findmnt -n -o ID --mountpoint "$destino" 2>/dev/null) || {
             umount "$destino" || true
+            limpiar_montajes
             error "No se pudo identificar el montaje: $destino"
         }
 
         if [[ ! "$mount_id" =~ ^[0-9]+$ ]]; then
             umount "$destino" || true
+            limpiar_montajes
             error "ID de montaje inválido: $destino"
         fi
 
